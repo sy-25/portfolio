@@ -131,7 +131,7 @@ a {
 
 .main {
   background-color: #efefef;
-  padding: 0 20px;
+  padding: 0 20px 60px;
 }
 .main .main__ttl {
   text-align: center;
@@ -154,6 +154,9 @@ a {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.section:nth-child(4) {
+  margin-bottom: 0;
 }
 @media screen and (max-width: 768px) {
   .section {
