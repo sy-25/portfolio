@@ -1,0 +1,590 @@
+@import '../common/mixin';
+
+.lead {
+    background: url('../../images/free/mainvisual.png') top center no-repeat #e9f2f4;
+
+    @include sp {
+        background-size: cover !important;
+    }
+}
+
+.free {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    @include sp {
+        margin-top: 50px;
+        display: block;
+    }
+
+    .free__img {
+        @include sp {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .free__txtArea {
+        width: 720px;
+
+        @include sp {
+            width: 100%;
+        }
+
+        .section__ttl {
+            font-size: 24px;
+            text-align: left;
+            margin: 24px 0 32px;
+
+            @include sp {
+                margin: 60px 0 34px;
+            }
+        }
+
+        .section__txt {
+
+            span {
+                display: block;
+                height: 33px;
+
+                @include sp {
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
+
+.contents {
+    text-align: center;
+
+    .section__txt {
+        margin: 40px auto;
+    }
+
+    .contents__listInner {
+        width: 1000px;
+        overflow-y: scroll;
+
+        @include sp {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .contents__list {
+            width: 1200px;
+            display: flex;
+            justify-content: center;
+
+            @include sp {
+                width: 100%;
+                transform: none;
+                flex-wrap: wrap;
+                justify-content: start;
+            }
+
+            .contents__listItem {
+                margin-right: 8px;
+
+                & img:hover {
+                    border-radius: 136px;
+                    background-color: $blue;
+                    transition: background-color 0.2s ease, border-radius 0.2s ease;
+                }
+
+                @include sp {
+                    margin-right: 0;
+                    margin-top: 20px;
+                    width: 33%;
+                }
+
+                @media screen and (max-width:600px) {
+                    width: 50%;
+                }
+
+                &:last-child {
+                    margin-right: none;
+                }
+            }
+        }
+
+    }
+}
+
+.contentsDetail {
+    margin-bottom: 80px;
+
+    .contentsDetail__list {
+
+        .contentsDetail__listItem {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+
+            @include sp {
+                display: block;
+            }
+
+            &:first-child {
+
+                @include sp {
+                    margin-bottom: 110px;
+                }
+            }
+
+            .contentsDetail__listItemImg {
+                @include sp {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+
+            .contentsDetail__txtArea {
+                width: 720px;
+                text-align: left;
+                position: relative;
+
+                @include sp {
+                    width: 100%;
+                }
+
+                .section__ttl {
+                    font-size: 20px;
+                    margin: 50px 0 15px;
+
+                    @include sp {
+                        text-align: center;
+                        margin: 15px 0 15px;
+                    }
+                }
+
+                .contentsDetail__btn {
+                    @include btn;
+                    top: 160px;
+
+                    @include sp {
+                        position: static;
+                        display: block;
+                        width: 200px;
+                        transform: translate(calc(50vw - 100px), 20px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.implant {
+    margin-top: 51px;
+    display: flex;
+    justify-content: space-between;
+
+    @include sp {
+        display: block;
+    }
+
+    .implant__imgArea {
+        position: relative;
+
+        @include sp {
+            max-width: 280px;
+            margin: 0 auto;
+            transform: translateX(-14px);
+        }
+
+        .implant__img {
+            @include sp {
+                display: block;
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+
+        .implant__fuki {
+            position: absolute;
+            top: -50px;
+            right: -40px;
+
+            @include sp {
+                width: 96px;
+                right: -23px;
+            }
+        }
+    }
+
+    .implant__txtArea {
+        width: 640px;
+
+        @include sp {
+            width: 100%;
+        }
+
+        .section__ttl {
+            font-size: 24px;
+            letter-spacing: 1.2px;
+            line-height: 38px;
+            text-align: left;
+            margin-bottom: 30px;
+            background: url(../images/bg_tooth.png) right bottom no-repeat;
+
+            @include sp {
+                margin-top: 20px;
+            }
+
+            span {
+                display: block;
+                margin-top: 12px;
+            }
+        }
+    }
+}
+
+.safety {
+
+    .section__ttlInner {
+        .section__ttlImg {
+            @include sp {
+                width: 100%;
+                max-width: 646px;
+            }
+        }
+    }
+
+    .safety__list {
+        margin: 40px 0 52px;
+
+        .safety__listItem {
+            margin: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 15px;
+            padding: 30px 40px;
+
+            @include sp {
+                display: block;
+                margin: 0;
+            }
+
+            &:nth-child(odd) {
+                background-color: $lightBlue;
+            }
+
+            &:first-child {
+                padding-bottom: 40px;
+
+                @include sp {
+                    padding-bottom: 80px;
+                }
+            }
+
+            &:nth-child(2) {
+                .section__txt {
+                    letter-spacing: -0.2px;
+                }
+            }
+
+            &:nth-child(3) {
+                .section__ttl {
+                    margin-top: 15px;
+                }
+            }
+
+            &:nth-child(5) {
+                .section__ttl {
+                    margin-top: 15px;
+                }
+            }
+
+
+            &:last-child {
+                .section__ttl {
+                    margin-top: 25px;
+                }
+            }
+
+            .safety__img {
+                height: 156px;
+
+                @include sp {
+                    height: auto;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+
+            .safety__txtArea {
+                width: 680px;
+                position: relative;
+
+                @include sp {
+                    width: 100%;
+                }
+
+                .section__ttl {
+                    text-align: left;
+                    margin-bottom: 15px;
+                }
+
+                .section__txt {
+                    font-size: 14px;
+                }
+
+                .safety__btn {
+                    @include btn;
+                    left: 0;
+                    bottom: 35px;
+
+                    @include sp {
+                        left: 50%;
+                        bottom: -20px;
+                        transform: translateX(-100px);
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.microend {
+    display: flex;
+    justify-content: space-between;
+
+    @include sp {
+        display: block;
+        margin-top: 50px;
+    }
+
+    .microend__img {
+        @include sp {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+        }
+    }
+
+    .microend__txtArea {
+        width: 720px;
+        margin-top: 55px;
+
+        @include sp {
+            width: 100%;
+        }
+
+        .section__ttl {
+            text-align: left;
+            margin-bottom: 30px;
+            font-size: 24px;
+            letter-spacing: 1.2px;
+            line-height: 38px;
+        }
+    }
+}
+
+.difficult {
+    .section__ttl {
+        text-align: center;
+        font-size: 20px;
+        line-height: 38px;
+        letter-spacing: 1.2px;
+    }
+
+    .difficult__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        @include sp {
+            display: block;
+        }
+
+        .difficult__img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .difficult__txtArea {
+            width: 720px;
+            margin-top: 10px;
+
+            @include sp {
+                width: 100%;
+            }
+
+            .section__ttl {
+                text-align: left;
+                font-size: 20px;
+                line-height: 38px;
+                letter-spacing: 1.2px;
+                margin-bottom: 10px;
+
+                @include sp {
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}
+
+.comparison {
+
+    .section__ttl {
+        text-align: center;
+        font-size: 20px;
+        line-height: 38px;
+        letter-spacing: 1.2px;
+        margin-bottom: 40px;
+    }
+
+    .comparison__img {
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    .section__txt {
+        margin-top: 10px;
+        font-size: 16px;
+
+        @include sp {
+            margin-top: 15px;
+        }
+    }
+}
+
+.recommend__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    @include sp {
+        display: block;
+        margin-top: 28px;
+    }
+
+    .recommend__img {
+        @include sp {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+        }
+    }
+
+    .recommend__txtArea {
+        width: 720px;
+        margin-top: 20px;
+
+        @include sp {
+            width: 100%;
+        }
+
+        .section__ttl {
+            text-align: left;
+            font-size: 24px;
+            line-height: 38px;
+            margin-bottom: 10px;
+
+            @include sp {
+                margin-top: 58px;
+            }
+        }
+
+        .section__txt {
+            font-size: 16px;
+        }
+    }
+}
+
+.merit {
+    margin-bottom: 60px;
+
+    .section__ttl {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .section__txt {
+        text-align: center;
+        margin-bottom: 40px;
+
+        @include sp {
+            text-align: left;
+        }
+    }
+
+    .merit__list {
+
+        .merit__listItem {
+            width: 920px;
+            margin: 0 auto;
+            padding: 30px 40px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+
+            @include sp {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+
+            &:nth-child(odd) {
+                background-color: $lightBlue;
+            }
+
+            .merit__txtArea {
+                width: 680px;
+
+                @include sp {
+                    width: 100%;
+                }
+
+                .section__ttl {
+                    font-size: 18px;
+                    text-align: left;
+                    margin: 15px 0 15px;
+                }
+
+                .section__txt {
+                    text-align: left;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .merit__caption {
+        text-align: center;
+        font-size: 20px;
+        margin: 40px 0;
+        color: $blueFont;
+        letter-spacing: 1.2px;
+        line-height: 38px;
+        font-weight: bold;
+    }
+
+    .merit__img {
+        display: block;
+        margin: 0 auto;
+
+        @include sp {
+            width: 100%;
+            max-width: 560px;
+        }
+    }
+}
+
+.flow {
+    margin-bottom: 100px;
+
+    .flow__ttl {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .flow__img {
+        width: 100%;
+    }
+}

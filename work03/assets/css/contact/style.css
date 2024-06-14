@@ -1,0 +1,218 @@
+.lead {
+  background: url("../../images/contact/mainvisual.png") top center no-repeat #e9f2f4;
+  height: 429px;
+}
+@media screen and (max-width: 768px) {
+  .lead {
+    height: 200px;
+    background-size: cover !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lead .lead__wave {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ttl .ttl__inner .ttl__nav {
+    margin-bottom: 127px;
+  }
+}
+
+.tel {
+  text-align: center;
+}
+.tel img {
+  display: block;
+  margin: 0 auto;
+}
+.tel .tel__imgTxt {
+  margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  .tel .tel__imgTxt {
+    margin-top: 50px;
+  }
+}
+.tel .tel__imgNumber {
+  margin-top: 33px;
+}
+.tel .tel__txt {
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 40px;
+  background-color: #eaf2f4;
+  letter-spacing: 1.1px;
+  width: 600px;
+  margin: 33px auto 0;
+}
+.tel .tel__txt span {
+  font-weight: 600;
+}
+.tel .tel__txt .cancelSmallWidth {
+  display: inline-block;
+  width: 11px;
+}
+@media screen and (max-width: 768px) {
+  .tel .tel__txt {
+    width: 580px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .tel .tel__txt {
+    width: calc(100vw - 30px);
+  }
+  .tel .tel__txt .cancelSmallWidth {
+    display: block;
+  }
+}
+
+.contact {
+  margin-top: 14px;
+}
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 0 10px;
+  }
+}
+.contact .contact__ttl {
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 480px) {
+  .contact .contact__ttl {
+    padding-bottom: 10px;
+  }
+}
+.contact iframe {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  min-width: 1000px;
+  height: 340px;
+}
+@media screen and (max-width: 768px) {
+  .contact iframe {
+    min-width: auto;
+  }
+}
+
+.information {
+  width: 1000px;
+  margin: 406px auto 79px;
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .information {
+    width: 100%;
+    max-width: 354px;
+    margin-top: 353px;
+    flex-direction: column;
+    padding: 60px 10px 30px;
+  }
+}
+.information .information__access {
+  width: 320px;
+}
+@media screen and (max-width: 768px) {
+  .information .information__access {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .information .information__access .information__accessImg {
+    display: block;
+    margin: 0 auto;
+  }
+}
+.information .information__access .information__accessLocation {
+  margin-top: 43px;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 1.1px;
+}
+@media screen and (max-width: 768px) {
+  .information .information__access .information__accessLocation {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+.information .information__access .information__date {
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 1.1px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .information .information__access .information__date {
+    margin-top: 0;
+    text-align: left;
+  }
+}
+.information .information__access .information__date dt {
+  float: left;
+}
+.information .information__access .information__date dd {
+  margin-left: 130px;
+}
+.information .information__table {
+  margin-top: 20px;
+  margin-left: 80px;
+  width: 600px;
+  text-align: center;
+  letter-spacing: 1.2px;
+  line-height: 40px;
+  border: 1px solid #42bad0;
+  border-collapse: collapse;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media screen and (max-width: 768px) {
+  .information .information__table {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+.information .information__table tr:nth-child(2) td {
+  border-top: none;
+}
+.information .information__table th {
+  background-color: #42bad0;
+  color: #fff;
+  font-size: 13px;
+  line-height: 40px;
+}
+@media screen and (max-width: 768px) {
+  .information .information__table th:first-child {
+    width: 22%;
+  }
+}
+.information .information__table td {
+  font-size: 12px;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+@media screen and (max-width: 768px) {
+  .information .information__table td {
+    white-space: nowrap;
+  }
+}
+.information .information__table td:last-child {
+  border-right: none;
+}
+.information .information__holiday {
+  width: 600px;
+  margin-top: 20px;
+  margin-left: 80px;
+  border-radius: 12px;
+  background: url(/common/images/menu_news.png) 20px 15px no-repeat #e9f2f4;
+  font-size: 14px;
+  padding: 20px 20px 20px 80px;
+}
+@media screen and (max-width: 768px) {
+  .information .information__holiday {
+    width: 100%;
+    margin-left: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

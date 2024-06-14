@@ -1,0 +1,127 @@
+@import '../common/mixin';
+
+.lead {
+    background: url('../../images/news/mainvisual.png') top center no-repeat #e9f2f4;
+
+    @include sp {
+        background-size: cover !important;
+    }
+}
+
+.news {
+    width: 1000px;
+    margin: 80px auto 0;
+    display: flex;
+
+    @include sp {
+        width: 100%;
+        display: block;
+        padding: 0 10px;
+        margin: 50px auto 0;
+    }
+
+    .past {
+        width: 280px;
+        transform: translateY(-4px);
+
+        @include sp {
+            width: 100%;
+        }
+
+        .past__list {
+            margin-top: 23px;
+
+            .past__listItem {
+                padding: 15px 20px;
+                border-bottom: 1px solid #ddd;
+
+                &:first-child {
+                    border-top: 1px solid #ddd;
+                }
+
+                .past__listItemDate {
+                    font-size: 11px;
+                    font-weight: 600;
+                    color: $blueFont;
+                    line-height: 11px;
+                    padding-bottom: 1px;
+                }
+
+                .past__listItemLink {
+                    font-size: 13px;
+                    color: #333;
+                    text-decoration: underline;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .article {
+        width: 640px;
+        position: relative;
+        margin: 0 0 120px 80px;
+
+        @include sp {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .article__contents {
+            margin-bottom: 80px;
+
+            @include sp {
+                &:nth-child(5) {
+                    margin-bottom: 170px;
+                }
+            }
+
+            .article__ttl {
+                font-size: 20px;
+                font-weight: 600;
+                color: $blueFont;
+                line-height: 30px;
+                margin-bottom: 30px;
+
+                @include sp {
+                    margin-top: 40px;
+                }
+            }
+
+            .article__txt {
+                font-size: 14px;
+                line-height: 30px;
+                margin-bottom: 30px;
+            }
+
+            img {
+                margin-bottom: 30px;
+
+                @include sp {
+                    width: 100%;
+                    max-width:460px;
+                }
+            }
+
+            .article__date {
+                font-size: 11px;
+                color: $blueFont;
+                line-height: 11px;
+                padding-top: 15px;
+                border-top: 1px solid #ddd;
+            }
+        }
+
+        .article__btn {
+            @include btn;
+            right: 200px;
+
+            @include sp {
+                bottom: -50px;
+            }
+        }
+    }
+}

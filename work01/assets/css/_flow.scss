@@ -1,0 +1,138 @@
+.flow {
+    padding: 140px 40px 0;
+
+    @include sp {
+        margin: 70px auto 0;
+        padding: 0;
+    }
+
+    .flow__heading {
+        text-align: center;
+        @include heading;
+
+        @include sp {
+            @include headingSp;
+        }
+    }
+
+    .flow__ttl {
+        text-align: center;
+        @include title;
+        margin-bottom: 34px;
+
+        @include sp {
+            @include titleSp;
+            margin-bottom: 30px;
+        }
+    }
+
+    .flow__inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        border-top: 1px solid $borderGray;
+        border-bottom: 1px solid $borderGray;
+
+        .flow__list {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 80px;
+            gap: 0 30px;
+            position: relative;
+
+            @include sp {
+                flex-wrap: wrap;
+                margin: 30px 20px;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: $gold;
+                left: 0;
+                top: 50%;
+                transform:translateY(-50%);
+                z-index: -1;
+
+                @include sp {
+                    width: 1px;
+                    height: calc(100% - 80px);
+                    top: 40px;
+                    left: 50px;
+                    transform: none;
+                }
+            }
+
+            .flow__listItem {
+                width: calc(33.33% - 20px);
+                border: 1px solid $gold;
+
+                @include sp {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+
+                .flow__listItemImgBox {
+                    overflow: hidden;
+                    .flow__listItemImg {
+                        width: 100%;
+                    }
+                }
+
+                .flow__listItemTxtBox {
+                    padding: 30px 40px 25px;
+                    background-color: #fff;
+
+                    @include sp {
+                        padding: 30px 20px 35px;
+                    }
+
+                    .flow__listItemHead {
+                        @include heading;
+
+                        @include sp {
+                            @include headingSp;
+                            margin-bottom: 15px;
+                        }
+
+                        span {
+                            @include circleNumber(20px);
+                            margin-left: 5px;
+                        }
+                    }
+
+                    .flow__listItemTtl {
+                        font-size: 14px;
+                        font-family: "Zen Old Mincho", serif;
+                        font-weight: bold;
+                        line-height: 1.5;
+                        margin-bottom: 20px;
+
+                        @include sp {
+                            font-size: 12px;
+                        }
+
+                        &::after {
+                            content: '';
+                            display: block;
+                            width: 110px;
+                            height: 2px;
+                            margin-top: 25px;
+                            background-color: $gold;
+
+                            @include sp {
+                                width: 55px;
+                            }
+                        }
+
+                        span {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

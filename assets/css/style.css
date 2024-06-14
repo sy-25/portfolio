@@ -1,0 +1,889 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #333;
+}
+
+a {
+  color: #333;
+  position: relative;
+}
+
+.headerNav__listItemLink::after,
+.footer__listItemLink::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #333;
+  transition: width 0.3s;
+}
+.headerNav__listItemLink:hover::after,
+.footer__listItemLink:hover::after {
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.header .headerNav {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 0 0 0 5px;
+  box-shadow: -5px 5px 3px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 768px) {
+  .header .headerNav {
+    width: 100vw;
+    border-radius: 0;
+  }
+}
+
+.headerNav__list {
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  .headerNav__list {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+.headerNav__list .headerNav__listItem {
+  text-align: center;
+}
+.headerNav__list .headerNav__listItem .headerNav__listItemLink {
+  font-size: 16px;
+}
+.headerNav__list .headerNav__listItem .headerNav__listItemLink.headerNav__listItemLink--about {
+  display: flex;
+  align-items: center;
+}
+.headerNav__list .headerNav__listItem .headerNav__listItemLink.headerNav__listItemLink--about::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/about.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .headerNav__list .headerNav__listItem .headerNav__listItemLink.headerNav__listItemLink--about::before {
+    width: 18px;
+    height: 18px;
+  }
+}
+.headerNav__list .headerNav__listItem .headerNav__listItemLink.headerNav__listItemLink--skill {
+  display: flex;
+  align-items: center;
+}
+.headerNav__list .headerNav__listItem .headerNav__listItemLink.headerNav__listItemLink--skill::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/skill.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .headerNav__list .headerNav__listItem .headerNav__listItemLink.headerNav__listItemLink--skill::before {
+    width: 18px;
+    height: 18px;
+  }
+}
+.headerNav__list .headerNav__listItem .headerNav__listItemLink.headerNav__listItemLink--work {
+  display: flex;
+  align-items: center;
+}
+.headerNav__list .headerNav__listItem .headerNav__listItemLink.headerNav__listItemLink--work::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/work.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .headerNav__list .headerNav__listItem .headerNav__listItemLink.headerNav__listItemLink--work::before {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .headerNav__list .headerNav__listItem .headerNav__listItemLink {
+    font-size: 14px;
+  }
+}
+
+.main {
+  background-color: #efefef;
+  padding: 0 20px;
+}
+.main .main__ttl {
+  text-align: center;
+  padding: 100px 0;
+  font-size: 45px;
+  font-family: "Josefin Sans", sans-serif;
+  font-style: italic;
+}
+@media screen and (max-width: 768px) {
+  .main .main__ttl {
+    font-size: 40px;
+    padding: 150px 0 100px;
+  }
+}
+
+.section {
+  max-width: 1000px;
+  margin: 0 auto 70px;
+  padding: 40px 40px 60px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 768px) {
+  .section {
+    margin-bottom: 50px;
+    padding: 40px 20px 60px;
+    border-radius: 5px;
+  }
+}
+.section .section__ttl {
+  justify-content: center;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+@media screen and (max-width: 768px) {
+  .section .section__ttl {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+}
+.section .section__anchor {
+  display: block;
+  margin-top: -100px;
+  padding-top: 100px;
+}
+
+.about .section__ttl {
+  display: flex;
+  align-items: center;
+}
+.about .section__ttl::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/about.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .about .section__ttl::before {
+    width: 36px;
+    height: 36px;
+  }
+}
+.about .about__contentsWrap {
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  .about .about__contentsWrap {
+    display: block;
+  }
+}
+
+.about__contents {
+  margin: 0 auto;
+}
+.about__contents.about__contents--img {
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .about__contents.about__contents--img {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+.about__contents.about__contents--img .about__contentsImg {
+  width: 100%;
+  border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  .about__contents.about__contents--img .about__contentsImg {
+    width: 40%;
+  }
+}
+.about__contents.about__contents--txt {
+  width: 75%;
+}
+@media screen and (max-width: 768px) {
+  .about__contents.about__contents--txt {
+    width: 100%;
+  }
+}
+.about__contents.about__contents--txt .about__contentsTxt {
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.about__contents.about__contents--txt .about__contentsTxt:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .about__contents.about__contents--txt .about__contentsTxt {
+    font-size: 14px;
+  }
+}
+
+.skill .section__ttl {
+  display: flex;
+  align-items: center;
+}
+.skill .section__ttl::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/skill.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .section__ttl::before {
+    width: 36px;
+    height: 36px;
+  }
+}
+.skill .skill__contents {
+  margin-bottom: 70px;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contents {
+    margin-bottom: 60px;
+  }
+}
+.skill .skill__contents:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contents {
+    width: 100%;
+  }
+}
+.skill .skill__contentsTtl {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.skill .skill__contentsTtl::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: #444;
+  border-radius: 50%;
+  vertical-align: center;
+  margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsTtl::before {
+    width: 12px;
+    height: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsTtl {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+.skill .skill__contentsTxt {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsTxt {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.skill .skill__contentsList .skill__contentsListItem:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem {
+    font-size: 18px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--html {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--html::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/html5.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--html::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--css {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--css::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/css3.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--css::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--scss {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--scss::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/scss.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--scss::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--js {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--js::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/js.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--js::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--jquery {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--jquery::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/jquery.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--jquery::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--vue {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--vue::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/vue.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--vue::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--aws {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--aws::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/aws.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--aws::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--vscode {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--vscode::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/vscode.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--vscode::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--github {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--github::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/github.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--github::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--ps {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--ps::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/photoshop.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--ps::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--discord {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--discord::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/discord.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--discord::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--teams {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--teams::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/teams.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--teams::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--slack {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--slack::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/slack.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--slack::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+
+.work .section__ttl {
+  display: flex;
+  align-items: center;
+}
+.work .section__ttl::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/work.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .work .section__ttl::before {
+    width: 36px;
+    height: 36px;
+  }
+}
+.work .work__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  .work .work__list {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .work__listItem {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+.work__listItem .work__listItemLink {
+  cursor: pointer;
+}
+.work__listItem .work__listItemLink:hover .work__listItemLinkImg {
+  transform: scale(1.1);
+}
+@media screen and (max-width: 768px) {
+  .work__listItem .work__listItemLink:hover .work__listItemLinkImg {
+    transform: none;
+  }
+}
+.work__listItem .work__listItemLink .work__listItemLinkImgWrap {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 768px) {
+  .work__listItem .work__listItemLink .work__listItemLinkImgWrap {
+    margin-bottom: 10px;
+  }
+}
+.work__listItem .work__listItemLink .work__listItemLinkImgWrap .work__listItemLinkImg {
+  width: 100%;
+  aspect-ratio: 540/335;
+  transition: transform 0.3s;
+}
+.work__listItem .work__listItemLink .work__listItemLinkTagWrap {
+  font-size: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.work__listItem .work__listItemLink .work__listItemLinkTagWrap .work__listItemLinkTag {
+  display: inline-block;
+  padding: 2px 0;
+  border-radius: 2px;
+  margin: 0 5px 5px 0;
+  text-align: center;
+  background-color: #444;
+  color: #fff;
+  white-space: nowrap;
+}
+.work__listItem .work__listItemLink .work__listItemLinkTagWrap .work__listItemLinkTag:nth-child(4n) {
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .work__listItem .work__listItemLink .work__listItemLinkTagWrap .work__listItemLinkTag {
+    padding: 6px 0;
+  }
+}
+
+.modal {
+  display: none;
+}
+.modal.is-show {
+  display: block;
+}
+.modal .modal__overlay {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+}
+.modal .modal__contentsWrap {
+  display: none;
+  gap: 20px;
+  z-index: 2;
+  width: calc(100% - 40px);
+  max-width: 1000px;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  background-color: #fff;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 40px 30px;
+  border-radius: 10px;
+}
+.modal .modal__contentsWrap.is-show {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .modal .modal__contentsWrap {
+    overflow-y: scroll;
+    height: 80%;
+    padding: 20px 20px 15px;
+  }
+  .modal .modal__contentsWrap.is-show {
+    display: block;
+  }
+}
+
+.modal__contents {
+  width: 45%;
+}
+@media screen and (max-width: 768px) {
+  .modal__contents {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modal__contents:first-child {
+    margin-bottom: 25px;
+  }
+}
+.modal__contents:first-child .modal__contentsImgWrap {
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .modal__contents:first-child .modal__contentsImgWrap {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+.modal__contents:first-child .modal__contentsImgWrap .modal__contentsImg {
+  width: 100%;
+}
+.modal__contents:first-child .modal__contentsLinkWrap {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.modal__contents:first-child .modal__contentsLinkWrap .modal__contentsLink {
+  justify-content: center;
+  font-size: 14px;
+  width: 160px;
+  padding: 5px 0;
+  border-radius: 20px;
+  border: 1px solid #333;
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .modal__contents:first-child .modal__contentsLinkWrap .modal__contentsLink {
+    padding: 3px 0;
+    width: 130px;
+  }
+}
+.modal__contents:first-child .modal__contentsLinkWrap .modal__contentsLink:hover {
+  box-shadow: none;
+  transform: translateY(3px);
+}
+@media screen and (max-width: 768px) {
+  .modal__contents:first-child .modal__contentsLinkWrap .modal__contentsLink:hover {
+    box-shadow: 0px 3px rgba(0, 0, 0, 0.3);
+    transform: none;
+  }
+}
+.modal__contents:first-child .modal__contentsLinkWrap .modal__contentsLink.modal__contentsLink--github {
+  display: flex;
+  align-items: center;
+}
+.modal__contents:first-child .modal__contentsLinkWrap .modal__contentsLink.modal__contentsLink--github::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/github.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .modal__contents:first-child .modal__contentsLinkWrap .modal__contentsLink.modal__contentsLink--github::before {
+    width: 18px;
+    height: 18px;
+  }
+}
+.modal__contents:first-child .modal__contentsLinkWrap .modal__contentsLink.modal__contentsLink--contents {
+  display: flex;
+  align-items: center;
+}
+.modal__contents:first-child .modal__contentsLinkWrap .modal__contentsLink.modal__contentsLink--contents::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/window.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .modal__contents:first-child .modal__contentsLinkWrap .modal__contentsLink.modal__contentsLink--contents::before {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modal__contents:first-child .modal__contentsLinkWrap .modal__contentsLink {
+    font-size: 14px;
+  }
+}
+.modal__contents:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.modal__contents:last-child .modal__contentsTtl {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+  .modal__contents:last-child .modal__contentsTtl {
+    font-size: 16px;
+  }
+}
+.modal__contents:last-child .modal__contentsTxt {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+@media screen and (max-width: 768px) {
+  .modal__contents:last-child .modal__contentsTxt {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22.5px;
+  }
+}
+.modal__contents:last-child .modal__contentsTagWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .modal__contents:last-child .modal__contentsTagWrap {
+    margin-bottom: 17.5px;
+  }
+}
+.modal__contents:last-child .modal__contentsTagWrap .modal__contentsTag {
+  padding: 2px 0;
+  border-radius: 2px;
+  margin: 0 5px 5px 0;
+  text-align: center;
+  background-color: #444;
+  color: #fff;
+}
+.modal__contents:last-child .modal__contentsTagWrap .modal__contentsTag:nth-child(4n) {
+  margin-right: 0;
+}
+.modal__contents:last-child .modal__contentsCaption {
+  font-size: 12px;
+  color: #555;
+}/*# sourceMappingURL=style.css.map */

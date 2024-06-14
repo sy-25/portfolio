@@ -1,0 +1,110 @@
+.merit {
+    margin: 100px auto 0;
+    max-width: 1200px;
+
+    @include sp {
+        margin-top: 70px;
+    }
+
+    .merit__heading {
+        text-align: center;
+        @include heading;
+
+        @include sp {
+            @include headingSp;
+        }
+    }
+
+    .merit__ttl {
+        text-align: center;
+        @include title;
+        margin-bottom: 34px;
+
+        @include sp {
+            @include titleSp;
+            margin-bottom: 30px;
+        }
+    }
+
+    .merit__list {
+        max-width: 1200px;
+
+        .merit__listItem {
+            border-top: 1px solid $borderGray;
+            display: flex;
+            padding: 40px 0;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+
+            @include sp {
+                flex-wrap: wrap;
+                padding: 30px 20px;
+                gap: 0px;
+            }
+
+            .merit__img {
+                width: 48%;
+                max-width: 500px;
+
+                @include sp {
+                    width: 100%;
+                    max-width: none;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .merit__txt {
+                width: 48%;
+                max-width: 500px;
+
+                @include sp {
+                    width: 100%;
+                    max-width: none;
+                }
+
+                .merit__head {
+                    @include heading;
+                    margin-bottom: 15px;
+
+
+                    @include sp {
+                        @include headingSp;
+                        margin-bottom: 15px;
+                    }
+
+                    span {
+                        @include circleNumber(20px);
+                        margin-left: 5px;
+                    }
+                }
+
+                .merit__intro {
+                    font-size: 24px;
+                    font-family: "Zen Old Mincho", serif;
+                    line-height: 1.5;
+                    position: relative;
+                    margin-bottom: 20px;
+                    padding-bottom: 20px;
+                    @include goldColorLine;
+
+                    @include sp {
+                        padding-bottom: 10px;
+                    }
+
+                    span {
+                        font-size: 34px;
+
+                        @include sp {
+                            font-size: 30px;
+                        }
+                    }
+                }
+
+                .merit__lead {
+                    line-height: 2;
+                }
+            }
+        }
+    }
+}

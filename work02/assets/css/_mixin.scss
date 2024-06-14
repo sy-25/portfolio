@@ -1,0 +1,9 @@
+$sp : 768px;
+$yellow: #ebc33e;
+
+@mixin sp {
+    @media screen and (max-width: ($sp)) {
+        @content
+    }
+}
+

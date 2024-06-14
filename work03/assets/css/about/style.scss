@@ -1,0 +1,528 @@
+@import '../common/mixin';
+
+.lead {
+    background: url('../../images/about/mainvisual.png') top center no-repeat #e9f2f4;
+
+    @include sp {
+        background-size: cover !important;
+    }
+}
+
+.about {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    @include sp {
+        flex-direction: column;
+        margin-top: 50px
+    }
+
+    .about__txtArea {
+        width: 440px;
+
+        @include sp {
+            order: 2;
+            width: 100%;
+            margin-top: 13px;
+        }
+
+        .section__ttl {
+            font-size: 24px;
+            line-height: 38px;
+            letter-spacing: 1.2px;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+    }
+
+    .about__img {
+        height: 380px;
+
+        @include sp {
+            order: 1;
+            width: 100%;
+            max-width: 481px;
+            height: auto;
+            margin: 0 auto 20px;
+        }
+    }
+}
+
+.treatment {
+    text-align: left;
+
+    .section__line {
+        margin: 40px 0 53px;
+
+        @include sp {
+            margin-bottom: 77px;
+        }
+    }
+
+    .treatment__ttlImg {
+        text-align: center;
+
+        @include sp {
+            width: 100%;
+            max-width: 374px;
+        }
+    }
+
+    .treatment__list {
+        margin-top: 43px;
+        width: 1000px;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include sp {
+            width: 100%;
+        }
+
+        .treatment__listItem {
+            width: 171px;
+            margin: 0 0 33px 36px;
+
+            @include sp {
+                width: 33%;
+                margin: 0 0 23px 0;
+                text-align: center;
+            }
+
+            @media screen and (max-width:600px) {
+                width: 50%;
+                padding: 0 10px;
+
+                img {
+                    width: 100%;
+                    max-width: 171px;
+                }
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:nth-child(6) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .section__txt {
+        text-align: center;
+        line-height: 22px;
+
+        @include sp {
+            margin-top: 30px;
+        }
+    }
+}
+
+.contact {
+    position: relative;
+
+    .section__line {
+        margin: 40px 0 53px;
+
+        @include sp {
+            margin-bottom: 72px;
+        }
+    }
+
+
+    iframe {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        min-width: 1000px;
+        height: 340px;
+
+        @include sp {
+            min-width: auto;
+            top: 177px;
+        }
+    }
+
+    .contact__ttl {
+        display: block;
+        margin-bottom: 40px;
+
+        @include sp {
+            width: 100%;
+            max-width: 374px;
+        }
+    }
+}
+
+.information {
+    width: 1000px;
+    margin: 446px auto 80px;
+    display: flex;
+
+    @include sp {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 354px;
+        padding: 60px 10px;
+        margin-bottom: 50px;
+    }
+
+    .information__access {
+        width: 320px;
+
+        .information__accessLocation {
+            margin-top: 40px;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 1.1px;
+
+            @include sp {
+                margin-top: 3px;
+            }
+        }
+
+        .information__date {
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 1.1px;
+
+            @include sp {
+                margin-top: 20px;
+            }
+
+            dt {
+                float: left;
+            }
+
+            dd {
+                margin-left: 130px;
+            }
+        }
+    }
+
+    .information__table {
+        margin-top: 20px;
+        margin-left: 80px;
+        width: 600px;
+        text-align: center;
+        letter-spacing: 1.2px;
+        line-height: 40px;
+        border: 1px solid $blue;
+        border-collapse: collapse;
+        height: fit-content;
+
+        @include sp {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+
+
+        tr {
+            &:nth-child(2) {
+                td {
+                    border-top: none;
+                }
+            }
+        }
+
+        th {
+            background-color: $blue;
+            color: #fff;
+            font-size: 13px;
+            line-height: 40px;
+
+            @include sp {
+                &:first-child {
+                    width: 22%;
+                }
+            }
+        }
+
+        td {
+            font-size: 12px;
+            border-top: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+
+            @include sp {
+                white-space: nowrap;
+            }
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+
+    .information__holiday {
+        width: 600px;
+        margin-top: 20px;
+        margin-left: 80px;
+        border-radius: 12px;
+        background: url(/common/images/menu_news.png) 20px 15px no-repeat $lightBlue;
+        font-size: 14px;
+        padding: 20px 20px 20px 80px;
+
+        @include sp {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+.clinic__list {
+    margin: 50px auto 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include sp {
+        display: block;
+    }
+
+    .clinic__listItem {
+        width: 460px;
+
+        @include sp {
+            width: 100%;
+            padding-bottom: 80px;
+
+            &:last-child {
+                padding-bottom: 20px;
+            }
+        }
+
+        &:nth-child(n+3) {
+            margin-top: 80px;
+
+            @include sp {
+                margin-top: 0;
+            }
+        }
+
+        .clinic__imgArea {
+            position: relative;
+
+            @include sp {
+                margin: 0 auto;
+                width: 100%;
+                max-width: 460px;
+            }
+
+            .clinic__img {
+                width: 100%;
+            }
+
+            .clinic__imgTxt {
+                position: absolute;
+                top: -50px;
+                left: 20px;
+            }
+
+            .clinic__imgZoom {
+                bottom: 75px;
+                right: 72px;
+                @include btn;
+
+                @include sp {
+                    right: 62px;
+                }
+            }
+        }
+
+        .section__ttl {
+            font-size: 19px;
+            line-height: 20px;
+            margin: 40px 0 20px;
+            text-align: left;
+        }
+    }
+}
+
+.equipment {
+    margin-top: 60px;
+
+    .section__ttl {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: 1.2px;
+
+    }
+
+    .section__txt {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .equipment__list {
+        width: 866px;
+        margin: 0 auto;
+        display: flex;
+
+        @include sp {
+            width: 430px;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+
+            @media screen and (max-width:480px) {
+                width: 290px;
+            }
+        }
+
+        .equipment__listItem {
+            margin-right: 10px;
+
+            .equipment__listItemImg:hover {
+                border-radius: 136px;
+                background-color: $blue;
+                transition: background-color 0.2s ease, border-radius 0.2s ease;
+            }
+
+            @include sp {
+                margin-right: 0;
+            }
+
+            &:last-child {
+                margin-right: none;
+            }
+        }
+    }
+}
+
+.equipmentExample {
+    margin-top: 0;
+
+    .equipmentExample__list {
+        margin-bottom: 80px;
+
+        .equipmentExample__listItem {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+
+            @include sp {
+                display: block;
+                margin-bottom: 60px;
+            }
+
+            .equipmentExample__listItemImg {
+                @include sp {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+
+            &#monitor .equipmentExample__listTxtArea ,
+            &stelite .equipmentExample__listTxtArea {
+                padding-top: 30px;
+
+                @include sp {
+                    padding-top: 0;
+                }
+            }
+
+            &#ems .equipmentExample__listTxtArea,
+            &#ccd .equipmentExample__listTxtArea,
+            &#mirror .equipmentExample__listTxtArea {
+                padding-top: 40px;
+
+                @include sp {
+                    padding-top: 0;
+                }
+            }
+
+            .equipmentExample__listTxtArea {
+                width: 720px;
+
+                @include sp {
+                    width: 100%;
+                }
+
+                .section__ttl {
+                    font-size: 19px;
+                    text-align: left;
+                    margin: 10px 0 15px;
+
+                    @include sp {
+                        text-align: center;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal {
+    position: relative;
+    z-index: 1;
+
+    .modal__overlay {
+        position: fixed;
+        inset: 0;
+        display: none;
+
+        &.is-show {
+            display: block;
+            background: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+    }
+
+    .modalItem {
+        width: 100%;
+        padding: 0 18px;
+
+        .imgBox {
+            position: fixed;
+            inset: 0;
+            margin: auto;
+            height: 0;
+            width: 0;
+            transition: height 0.5s, width 0.5s;
+            overflow: hidden;
+            background-color: #000;
+            border-radius: 10px;
+
+            &.is-show {
+                width: 800px;
+                height: fit-content;
+
+                @media screen and (max-width:860px) {
+                    width: calc(100% - 40px);
+                }
+            }
+
+            .imgBox__txt {
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: calc(50% - 34px);
+                background: url('../../images/about/loading.gif') no-repeat;
+                padding-left: 34px;
+                color: #FFF;
+                opacity: 1;
+                transition: opacity .5s;
+
+                &.is-hide {
+                    opacity: 0;
+                }
+            }
+
+            .modal__img {
+                width: 100%;
+                opacity: 0;
+                transition: opacity 0.5s;
+
+                &.is-show {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

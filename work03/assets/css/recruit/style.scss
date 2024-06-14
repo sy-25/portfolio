@@ -1,0 +1,134 @@
+@import '../common/mixin';
+
+.lead {
+    background: url('../../images/recruit/mainvisual.png') top center no-repeat #e9f2f4;
+
+    @include sp {
+        height: 200px;
+        background-size: cover !important;
+
+        .lead__wave {
+            height: 200px;
+        }
+    }
+}
+
+.ttl .ttl__inner {
+    @include sp {
+        margin-bottom: 24px;
+    }
+}
+
+.recruit {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    @include sp {
+        margin-top: 30px;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .recruit__txtArea {
+        width: 440px;
+
+        @include sp {
+            width: 100%;
+            order: 2;
+            margin-bottom: 60px;
+        }
+
+        .section__ttl {
+            margin: 23px 0 30px;
+            font-size: 24px;
+            line-height: 38px;
+            letter-spacing: 0px;
+        }
+    }
+
+    .recruit__img {
+        @include sp {
+            order: 1;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 481px;
+        }
+    }
+}
+
+.btnImportant__inner {
+    width: 1000px;
+    margin: 0 auto;
+    transform: translateY(3px);
+
+    @include sp {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .btnImportant {
+        display: block;
+        max-width: 700px;
+        margin: 60px auto 0;
+
+        @include sp {
+            margin-top: 0;
+
+            img {
+                margin-top: 12px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.offer {
+    margin-bottom: 80px;
+
+    .offer__ttl {
+        text-align: center;
+    }
+
+    .offer__txt {
+        margin: 43px auto 40px;
+        width: 600px;
+        font-size: 14px;
+
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    .offer__list {
+        width: 600px;
+        margin: 0 auto;
+
+        @include sp {
+            width: 100%;
+        }
+
+        .offer__listItem {
+            border-top: 1px solid #ddd;
+            display: flex;
+            height: 41px;
+
+            &:last-child {
+                border-bottom: 1px solid #ddd;
+            }
+
+            .section__ttl {
+                width: 140px;
+                font-size: 13px;
+                line-height: 40px;
+                padding-left: 30px;
+            }
+
+            .section__txt {
+                font-size: 13px;
+                line-height: 40px;
+            }
+        }
+    }
+}

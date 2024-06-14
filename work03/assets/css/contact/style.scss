@@ -1,0 +1,231 @@
+@import '../common/mixin';
+
+.lead {
+    background: url('../../images/contact/mainvisual.png') top center no-repeat #e9f2f4;
+    height: 429px;
+    @include sp {
+        height: 200px;
+        background-size: cover !important;
+    }
+
+    .lead__wave {
+        @include sp {
+            height: 200px;
+        }
+    }
+}
+
+.ttl .ttl__inner .ttl__nav {
+    @media screen and (max-width:600px) {
+        margin-bottom: 127px;
+    }
+}
+
+.tel {
+    text-align: center;
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    .tel__imgTxt {
+        margin-top: 40px;
+
+        @include sp {
+            margin-top: 50px;
+        }
+    }
+
+    .tel__imgNumber {
+        margin-top: 33px;
+    }
+
+    .tel__txt {
+        border-radius: 15px;
+        font-size: 14px;
+        line-height: 40px;
+        background-color: #eaf2f4;
+        letter-spacing: 1.1px;
+        width: 600px;
+        margin: 33px auto 0;
+
+        span {
+            font-weight: 600;
+        }
+
+        .cancelSmallWidth {
+            display: inline-block;
+            width: 11px;
+        }
+
+        @include sp {
+            width: 580px;
+        }
+
+        @media screen and (max-width:600px) {
+            width: calc(100vw - 30px);
+
+            .cancelSmallWidth {
+                display: block;
+            }
+        }
+    }
+}
+
+.contact {
+    margin-top: 14px;
+
+    @include sp {
+        padding: 0 10px;
+    }
+
+    .contact__ttl {
+        padding-bottom: 40px;
+
+        @media screen and (max-width:480px) {
+            padding-bottom: 10px;
+        }
+    }
+
+    iframe {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        min-width: 1000px;
+        height: 340px;
+
+        @include sp {
+            min-width: auto;
+        }
+    }
+}
+
+.information {
+    width: 1000px;
+    margin: 406px auto 79px;
+    display: flex;
+
+    @include sp {
+        width: 100%;
+        max-width: 354px;
+        margin-top: 353px;
+        flex-direction: column;
+        padding: 60px 10px 30px;
+    }
+
+    .information__access {
+        width: 320px;
+
+        @include sp {
+            width: 100%;
+        }
+
+        .information__accessImg {
+            @media screen and (max-width:480px) {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .information__accessLocation {
+            margin-top: 43px;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 1.1px;
+
+            @include sp {
+                text-align: left;
+                margin-bottom: 20px;
+            }
+        }
+
+        .information__date {
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 1.1px;
+            margin-top: 20px;
+
+            @include sp {
+                margin-top: 0;
+                text-align: left;
+            }
+
+            dt {
+                float: left;
+            }
+
+            dd {
+                margin-left: 130px;
+            }
+        }
+    }
+
+    .information__table {
+        margin-top: 20px;
+        margin-left: 80px;
+        width: 600px;
+        text-align: center;
+        letter-spacing: 1.2px;
+        line-height: 40px;
+        border: 1px solid $blue;
+        border-collapse: collapse;
+        height: fit-content;
+
+        @include sp {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+
+
+        tr {
+            &:nth-child(2) {
+                td{
+                    border-top: none;
+                }
+            }
+        }
+
+        th {
+            background-color: $blue;
+            color: #fff;
+            font-size: 13px;
+            line-height: 40px;
+
+            @include sp {
+                &:first-child {
+                    width: 22%;
+                }
+            }
+        }
+
+        td {
+            font-size: 12px;
+            border-top: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+
+            @include sp {
+                white-space: nowrap;
+            }
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+
+    .information__holiday {
+        width: 600px;
+        margin-top: 20px;
+        margin-left: 80px;
+        border-radius: 12px;
+        background: url(/common/images/menu_news.png) 20px 15px no-repeat $lightBlue;
+        font-size: 14px;
+        padding: 20px 20px 20px 80px;
+
+        @include sp {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}

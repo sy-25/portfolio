@@ -1,0 +1,126 @@
+$sp : 1023px;
+$black : #333;
+$gold : #c7a93f;
+$red : #c02121;
+$gray : #f8f8f8;
+$borderGray : #e0e0e0;
+
+@mixin sp {
+    @media screen and (max-width: ($sp)) {
+        @content
+    };
+};
+
+@mixin heading {
+    color: $gold;
+    font-size: 24px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+@mixin headingSp {
+    font-size: 22px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    color: $gold;
+    line-height: 1;
+    margin-bottom: 5px;
+};
+
+@mixin title {
+    font-size: 40px;
+    font-family: "Zen Old Mincho", serif;
+    line-height: 1.5;
+};
+
+@mixin titleSp {
+    font-size: 27px;
+    font-family: "Zen Old Mincho", serif;
+    line-height: 1.5;
+};
+
+@mixin subtitle {
+    font-size: 40px;
+    font-family: "Zen Old Mincho", serif;
+};
+
+@mixin colorLine {
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 2px;
+        background-color: $gold;
+        bottom: 0;
+        z-index: 1;
+
+        @include sp {
+            width: 157px;
+        }
+    };
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 1000%;
+        height: 1px;
+        margin: 0 calc(50% - 50vw);
+        background-color: $borderGray;
+        bottom: 0;
+        z-index: 0;
+    }
+};
+
+@mixin goldColorLine {
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 2px;
+        background-color: $gold;
+        bottom: 0;
+        z-index: 1;
+    }
+};
+
+@mixin hoverOpacity {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+};
+
+@mixin btn($color) {
+    cursor: pointer;
+    box-shadow: 0 6px 0 $color;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:hover {
+        transform: translateY(6px);
+        box-shadow: none;
+    }
+};
+
+@mixin circleNumber ($size) {
+    width: $size;
+    height: $size;
+    line-height: calc( $size *4 /5) ;
+    vertical-align: calc( $size /10);
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    background-color: $gold;
+    border-radius: 50%;
+};
+

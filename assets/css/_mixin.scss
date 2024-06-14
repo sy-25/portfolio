@@ -1,0 +1,27 @@
+$sp: 768px;
+
+@mixin sp {
+    @media screen and (max-width: ($sp)) {
+        @content
+    }
+};
+
+@mixin textImg($length, $img) {
+    display: flex;
+    align-items: center;
+    &::before {
+        content: '';
+        display: inline-block;
+        width: $length;
+        height: $length;
+        background-image: url($img);
+        background-size: contain;
+        margin-right: 0.5em;
+        vertical-align: bottom;
+
+        @include sp {
+            width: calc($length * 9 / 10);
+            height: calc($length * 9 / 10);
+        }
+    }
+}

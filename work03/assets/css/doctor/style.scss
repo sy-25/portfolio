@@ -1,0 +1,281 @@
+@import '../common/mixin';
+
+.lead {
+    @include sp {
+        background-size: cover !important;
+    }
+}
+
+.lead.doctor {
+    background: url('../../images/doctor/mainvisual_doctor.png') top center no-repeat #e9f2f4;
+}
+
+.lead.hope {
+    background: url('../../images/doctor/mainvisual_hope.png') top center no-repeat #e9f2f4;
+}
+
+.ttl .ttl__inner .ttl__nav {
+    @media screen and (max-width:600px) {
+        margin-bottom: 127px;
+    }
+}
+
+.introduction {
+    width: 1000px;
+    margin: 40px auto 0;
+
+    @include sp {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .introduction__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        .introduction__img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        @include sp {
+            display: block;
+        }
+
+        .introduction__img {
+            @include sp {
+                width: 100%;
+                max-width: 481px;
+            }
+        }
+
+        .introduction__txtArea {
+            margin-top: 20px;
+            width: 440px;
+
+            @include sp {
+                width: 100%;
+            }
+
+            .section__ttl {
+                font-size: 24px;
+                line-height: 38px;
+                letter-spacing: 1.2px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.introductionDetail {
+    background-color: $lightBlue;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 30px 60px;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+
+    @include sp {
+        width: 100%;
+        display: block;
+        padding: 30px;
+    }
+
+    @media screen and (max-width:480px) {
+        padding: 32px 20px 20px;
+    }
+
+    .career {
+        width: 460px;
+        transform: translateY(15px);
+
+        @include sp {
+            width: 100%;
+            margin-bottom: 20px;
+            transform: none;
+        }
+
+        dl {
+            dt {
+                width: 99px;
+                float: left;
+                font-size: 16px;
+                color: $blueFont;
+                line-height: 170px;
+                border-right: 1px solid #ddd;
+                font-weight: bold;
+
+                @media screen and (max-width:480px) {
+                    width: 100%;
+                    float: none;
+                    line-height: 40px;
+                    border-bottom: 1px solid #ddd;
+                    border-right: none;
+                    margin-bottom: 10px;
+                }
+            }
+
+            dd {
+                width: 460px;
+                padding-left: 140px;
+                font-size: 13px;
+                line-height: 28px;
+
+                @include sp {
+                    width: 480px;
+                }
+
+                @media screen and (max-width:480px) {
+                    width: 100%;
+                    padding-left: 0;
+                    margin-bottom: 10px;
+                }
+            }
+
+        }
+    }
+
+    .institute {
+        width: 340px;
+
+        @include sp {
+            width: 100%;
+        }
+
+        dl {
+
+            @include sp {
+                display: block;
+            }
+
+            &:last-child {
+                margin-top: 20px;
+
+                dt {
+                    line-height: 100px;
+
+                    @media screen and (max-width:480px) {
+                        line-height: 40px;
+                    }
+                }
+            }
+
+            dt {
+                width: 99px;
+                float: left;
+                font-size: 16px;
+                color: $blueFont;
+                line-height: 70px;
+                border-right: 1px solid #ddd;
+                font-weight: bold;
+
+                @media screen and (max-width:480px) {
+                    width: 100%;
+                    float: none;
+                    line-height: 40px;
+                    border-bottom: 1px solid #ddd;
+                    border-right: none;
+                    margin-bottom: 10px;
+                }
+            }
+
+            dd {
+                width: 340px;
+                padding-left: 140px;
+                font-size: 13px;
+                line-height: 24px;
+
+                @include sp {
+                    width: 480px;
+                }
+
+                @media screen and (max-width:480px) {
+                    width: 100%;
+                    padding-left: 0;
+                    margin-bottom: 10px;
+                }
+            }
+
+        }
+    }
+}
+
+.staffIntroduction {
+    margin-bottom: 83px;
+
+    .section__ttl {
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .staffIntroduction__img {
+        @include sp {
+            width: 100%;
+        }
+    }
+}
+
+.hope {
+    text-align: center;
+
+    .hope__inner {
+        display: flex;
+        justify-content: space-between;
+
+        @include sp {
+            display: block;
+            margin-top: 50px;
+        }
+
+        .hope__txtArea {
+            width: 600px;
+            text-align: left;
+
+            @include sp {
+                width: 100%;
+            }
+
+            .section__txt {
+                line-height: 34px;
+
+                @include sp {
+                    text-align: center;
+                    margin: 20px auto 0;
+                }
+
+                @media screen and (max-width:600px) {
+                    br {
+                        display: none;
+                    }
+                }
+
+                span {
+                    display: block;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: $blueFont;
+                    letter-spacing: 1.2px;
+                    margin: 33px 0;
+                }
+            }
+        }
+    }
+
+    .hope__name {
+        margin-top: 60px;
+        text-align: right;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: bold;
+    }
+
+    .hope__img {
+        margin-bottom: -40px;
+
+        @include sp {
+            margin-bottom: -18px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.footer {
+    padding: 35px 40px 80px;
+
+    .footer__list {
+        display: flex;
+        gap: 10px 75px;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style: none;
+
+        .footer__listItem {
+            @include hoverOpacity;
+        }
+    }
+
+    .footer__copyright {
+        margin-top: 25px;
+        text-align: center;
+
+        @include sp {
+            font-size: 12px;
+        }
+    }
+}

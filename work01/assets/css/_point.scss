@@ -1,0 +1,141 @@
+.section {
+    .heading{
+        font-size: 24px;
+    }
+
+    .ttl {
+        font-size: 43px;
+    }
+    &.merit {
+        .heading {
+            font-size: 10px;
+        }
+    }
+}
+
+
+
+
+.point {
+    padding: 160px 40px 0;
+
+    @include sp {
+        padding: 0 20px;
+    }
+
+    .point__inner {
+        max-width: 1040px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        @include sp {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .point__txtBox {
+            width: calc(100% - 380px);
+
+            @include sp {
+                order: 2;
+                width: 100%;
+            }
+
+            .point__heading {
+                @include heading;
+
+                @include sp {
+                    @include headingSp;
+                }
+            }
+
+            .point__ttl {
+                font-size: 34px;
+                font-family: "Zen Old Mincho", serif;
+                line-height: 1.5;
+                padding-bottom: 30px;
+                margin-bottom: 35px;
+                position: relative;
+                @include colorLine;
+
+                @include sp {
+                    font-size: 23px;
+                }
+
+                strong {
+                    font-size: 48px;
+                    font-weight: bold;
+
+                    @include sp {
+                        font-size: 32px;
+                    }
+                }
+
+            }
+        }
+
+        .point__list {
+            padding-left: 15px;
+
+            @include sp {
+                padding-left: 0;
+            }
+
+            .point__listItem {
+                font-size: 24px;
+
+                @include sp {
+                    font-size: 20px;
+                }
+
+                span {
+                    @include circleNumber(25px);
+                    margin-right: 10px;
+
+                    @include sp {
+                        @include circleNumber(20px)
+                    }
+                }
+
+                strong {
+                    color: $gold;
+                }
+            }
+        }
+    }
+
+    .point__imgBox {
+        width: 46%;
+        max-width: 480px;
+        margin: -100px -120px 25px 0;
+        position: relative;
+
+        @include sp {
+            order: 1;
+            max-width: none;
+            width: 100%;
+            padding: 0 0 25px 22%;
+            margin: 70px 0 30px;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            background-image: url(../images/img_first02.jpg);
+            background-size: 100%;
+            width: 50%;
+            padding: 67% 0 0;
+            position: absolute;
+            left: -145px;
+            bottom: -20px;
+
+            @include sp {
+                width: 38%;
+                padding: 46% 0 0;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+}

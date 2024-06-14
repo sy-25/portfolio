@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./assets/css/ress.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/main.js" defer></script>
+    <title>Y.S's Portfolio</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="headerNav">
+            <ul class="headerNav__list">
+                <li class="headerNav__listItem">
+                    <a href="#about" class="headerNav__listItemLink headerNav__listItemLink--about">私について</a>
+                </li>
+                <li class="headerNav__listItem">
+                    <a href="#skill" class="headerNav__listItemLink headerNav__listItemLink--skill">スキル</a>
+                </li>
+                <li class="headerNav__listItem">
+                    <a href="#work" class="headerNav__listItemLink headerNav__listItemLink--work">制作作品</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <h1 class="main__ttl">Y.S's Portfolio</h1>
+        <section class="about section">
+            <a id="about" class="section__anchor"></a>
+            <h2 class="section__ttl">私について</h2>
+            <div class="about__contentsWrap">
+                <figure class="about__contents about__contents--img">
+                    <img src="./assets/images/about_icon.jpg" alt="実家の猫(むうた)" class="about__contentsImg">
+                </figure>
+                <div class="about__contents about__contents--txt">
+                    <p class="about__contentsTxt">
+                        大学卒業後、Web系エンジニアを目指しS社に4月入社。現在、自社受託案件のマークアップエンジニア兼AWSサーバ構築兼運用補助をしております。
+                    </p>
+                    <p class="about__contentsTxt">
+                        現在は社内案件とともに、フロントエンドエンジニアとしてのキャリアアップを目指し、フレームワークの学習をメインに、サーバ・インフラについても実務を通して学んでおります。新しい事を習得する事が好きで、飲み込みと理解の早さは自身の強みです。
+                    </p>
+                    <p class="about__contentsTxt">
+                        学生時代にはラグビー部に所属しており体力には自信があります。コミュニケーションは得意で、友人やバイト先ではまとめ役になる事が多かったです。
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="skill section">
+            <a id="skill" class="section__anchor"></a>
+            <h2 class="section__ttl">スキル</h2>
+            <div class="skill__contents">
+                <h3 class="skill__contentsTtl">コーディング</h3>
+                <p class="skill__contentsTxt">静的ページのコーディングに必要なスキルセットは持ち合わせています。</p>
+                <ul class="skill__contentsList">
+                    <li class="skill__contentsListItem skill__contentsListItem--html">HTML5</li>
+                    <li class="skill__contentsListItem skill__contentsListItem--css">CSS3</li>
+                    <li class="skill__contentsListItem skill__contentsListItem--scss">SCSS</li>
+                    <li class="skill__contentsListItem skill__contentsListItem--js">JavaScript</li>
+                    <li class="skill__contentsListItem skill__contentsListItem--jquery">jQuery</li>
+                    <li class="skill__contentsListItem skill__contentsListItem--vue">Vue 2</li>
+                </ul>
+            </div>
+            <div class="skill__contents">
+                <h3 class="skill__contentsTtl">サーバ、インフラ</h3>
+                <p class="skill__contentsTxt">サイト管理、WordPress構築の経験があります。</p>
+                <ul class="skill__contentsList">
+                    <li class="skill__contentsListItem skill__contentsListItem--aws">AWS(EC2)</li>
+                </ul>
+            </div>
+            <div class="skill__contents">
+                <h3 class="skill__contentsTtl">ツール</h3>
+                <p class="skill__contentsTxt">業務で使用した経験のあるツールです。</p>
+                <ul class="skill__contentsList">
+                    <li class="skill__contentsListItem skill__contentsListItem--vscode">Visual Studio code</li>
+                    <li class="skill__contentsListItem skill__contentsListItem--github">GitHub</li>
+                    <li class="skill__contentsListItem skill__contentsListItem--ps">Photoshop</li>
+                    <li class="skill__contentsListItem skill__contentsListItem--discord">Discord</li>
+                    <li class="skill__contentsListItem skill__contentsListItem--teams">Teams</li>
+                    <li class="skill__contentsListItem skill__contentsListItem--slack">Slack</li>
+                </ul>
+            </div>
+        </section>
+        <section class="work section">
+            <a id="work" class="section__anchor"></a>
+            <h2 class="section__ttl">制作作品</h2>
+            <ul class="work__list">
+                <li class="work__listItem">
+                    <a class="work__listItemLink js-work__listItemLink" data-target="portfolio">
+                        <figure class="work__listItemLinkImgWrap">
+                            <img src="./assets/images/portfolio.png" class="work__listItemLinkImg">
+                        </figure>
+                        <ul class="work__listItemLinkTagWrap">
+                            <li class="work__listItemLinkTag">HTML</li>
+                            <li class="work__listItemLinkTag">CSS</li>
+                            <li class="work__listItemLinkTag">SCSS</li>
+                            <li class="work__listItemLinkTag">JS</li>
+                            <li class="work__listItemLinkTag">レスポンシブ</li>
+                        </ul>
+                    </a>
+                </li>
+                <li class="work__listItem">
+                    <a class="work__listItemLink js-work__listItemLink" data-target="pae">
+                        <figure class="work__listItemLinkImgWrap">
+                            <img src="./assets/images/portfolio03.png" class="work__listItemLinkImg">
+                        </figure>
+                        <ul class="work__listItemLinkTagWrap">
+                            <li class="work__listItemLinkTag">HTML</li>
+                            <li class="work__listItemLinkTag">CSS</li>
+                            <li class="work__listItemLinkTag">SCSS</li>
+                            <li class="work__listItemLinkTag">JS</li>
+                            <li class="work__listItemLinkTag">jQuery</li>
+                            <li class="work__listItemLinkTag">slick.js</li>
+                            <li class="work__listItemLinkTag">レスポンシブ</li>
+                        </ul>
+                    </a>
+                </li>
+                <li class="work__listItem">
+                    <a class="work__listItemLink js-work__listItemLink" data-target="konnyaku">
+                        <figure class="work__listItemLinkImgWrap">
+                            <img src="./assets/images/portfolio02.png" class="work__listItemLinkImg">
+                        </figure>
+                        <ul class="work__listItemLinkTagWrap">
+                            <li class="work__listItemLinkTag">HTML</li>
+                            <li class="work__listItemLinkTag">CSS</li>
+                            <li class="work__listItemLinkTag">SCSS</li>
+                            <li class="work__listItemLinkTag">JS</li>
+                            <li class="work__listItemLinkTag">jQuery</li>
+                            <li class="work__listItemLinkTag">slick.js</li>
+                            <li class="work__listItemLinkTag">レスポンシブ</li>
+                        </ul>
+                    </a>
+                </li>
+                <li class="work__listItem">
+                    <a class="work__listItemLink js-work__listItemLink" data-target="tecom">
+                        <figure class="work__listItemLinkImgWrap">
+                            <img src="./assets/images/portfolio01.png" class="work__listItemLinkImg">
+                        </figure>
+                        <ul class="work__listItemLinkTagWrap">
+                            <li class="work__listItemLinkTag">HTML</li>
+                            <li class="work__listItemLinkTag">CSS</li>
+                            <li class="work__listItemLinkTag">SCSS</li>
+                            <li class="work__listItemLinkTag">レスポンシブ</li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <div class="modal js-modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__contentsWrap js-modalItem" id="portfolio">
+                <div class="modal__contents">
+                    <figure class="modal__contentsImgWrap">
+                        <img src="./assets/images/portfolio.png" class="modal__contentsImg">
+                    </figure>
+                    <div class="modal__contentsLinkWrap">
+                        <a href="" class="modal__contentsLink modal__contentsLink--github" target=”_blank” rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+                <div class="modal__contents">
+                    <h3 class="modal__contentsTtl">ポートフォリオサイト(本サイト)</h3>
+                    <p class="modal__contentsTxt">
+                        自己紹介用として自作したポートフォリオサイトです。視覚的にグループ化されたシンプルなデザインと、運用・管理がしやすい構造を心がけました。プラグインは使用せずモーダルは自作しております。<br>
+                        ＊写真は愛猫の「むうた」です。
+                    </p>
+                    <ul class="modal__contentsTagWrap">
+                        <li class="modal__contentsTag">HTML</li>
+                        <li class="modal__contentsTag">CSS</li>
+                        <li class="modal__contentsTag">SCSS</li>
+                        <li class="modal__contentsTag">JS</li>
+                        <li class="modal__contentsTag">レスポンシブ</li>
+                    </ul>
+                    <p class="modal__contentsCaption">
+                        制作：2024年<br>
+                        体制：ディレクター1名、エンジニアリーダー1名、コーダー1名（本人）
+                    </p>
+                </div>
+            </div>
+            <div class="modal__contentsWrap js-modalItem" id="pae">
+                <div class="modal__contents">
+                    <figure class="modal__contentsImgWrap">
+                        <img src="./assets/images/portfolio03.png" class="modal__contentsImg">
+                    </figure>
+                    <div class="modal__contentsLinkWrap">
+                        <a href="https://github.com/supream-SY/pae" class="modal__contentsLink modal__contentsLink--github" target=”_blank” rel="noopener noreferrer">GitHub</a>
+                        <a href="http://yamada.pfolio.tokyo/work03/" class="modal__contentsLink modal__contentsLink--contents" target=”_blank” rel="noopener noreferrer">実物サイト</a>
+                    </div>
+                </div>
+                <div class="modal__contents">
+                    <h3 class="modal__contentsTtl">［S社］クリニック公式サイト</h3>
+                    <p class="modal__contentsTxt">
+                        トップページカルーセルはプラグインを使用し、モーダルは自作しました。デザインとのズレを出さないように要素同士の間をpx単位できっちり合わせると共に、各端末毎の表示崩れに注意を払いました。下層ページがあるサイトにつき、各リソースファイルの整理・管理が課題になりました。
+                    </p>
+                    <ul class="modal__contentsTagWrap">
+                        <li class="modal__contentsTag">HTML</li>
+                        <li class="modal__contentsTag">CSS</li>
+                        <li class="modal__contentsTag">SCSS</li>
+                        <li class="modal__contentsTag">JS</li>
+                        <li class="modal__contentsTag">jQuery</li>
+                        <li class="modal__contentsTag">slick.js</li>
+                        <li class="modal__contentsTag">レスポンシブ</li>
+                    </ul>
+                    <p class="modal__contentsCaption">
+                        制作：2024年<br>
+                        体制：ディレクター1名、エンジニアリーダー1名、コーダー1名（本人）
+                    </p>
+                </div>
+            </div>
+            <div class="modal__contentsWrap js-modalItem" id="konnyaku">
+                <div class="modal__contents">
+                    <figure class="modal__contentsImgWrap">
+                        <img src="./assets/images/portfolio02.png" class="modal__contentsImg">
+                    </figure>
+                    <div class="modal__contentsLinkWrap">
+                        <a href="https://github.com/supream-SY/konnyaku" class="modal__contentsLink modal__contentsLink--github" target=”_blank” rel="noopener noreferrer">GitHub</a>
+                        <a href="http://yamada.pfolio.tokyo/work02/" class="modal__contentsLink modal__contentsLink--contents" target=”_blank” rel="noopener noreferrer">実物サイト</a>
+                    </div>
+                </div>
+                <div class="modal__contents">
+                    <h3 class="modal__contentsTtl">［S社］ブランド特設ページ</h3>
+                    <p class="modal__contentsTxt">
+                        キービジュアルのカルーセルはプラグインを使用し、モーダルは自作しました。注力した点は、細かな余白もきっちりと仕上がるよう、デザインとの突き合わせを丁寧に行った事です。リキッドレイアウトに取り組むにあたり、閲覧幅ごとの調整に注意を払う事が大きな課題になりました。
+                    </p>
+                    <ul class="modal__contentsTagWrap">
+                        <li class="modal__contentsTag">HTML</li>
+                        <li class="modal__contentsTag">CSS</li>
+                        <li class="modal__contentsTag">SCSS</li>
+                        <li class="modal__contentsTag">JS</li>
+                        <li class="modal__contentsTag">jQuery</li>
+                        <li class="modal__contentsTag">slick.js</li>
+                        <li class="modal__contentsTag">レスポンシブ</li>
+                    </ul>
+                    <p class="modal__contentsCaption">
+                        制作：2024年<br>
+                        体制：ディレクター1名、エンジニアリーダー1名、コーダー1名（本人）
+                    </p>
+                </div>
+            </div>
+            <div class="modal__contentsWrap js-modalItem" id="tecom">
+                <div class="modal__contents">
+                    <figure class="modal__contentsImgWrap">
+                        <img src="./assets/images/portfolio01.png" class="modal__contentsImg">
+                    </figure>
+                    <div class="modal__contentsLinkWrap">
+                        <a href="https://github.com/supream-SY/TECOM" class="modal__contentsLink modal__contentsLink--github" target=”_blank” rel="noopener noreferrer">GitHub</a>
+                        <a href="http://yamada.pfolio.tokyo/work01/" class="modal__contentsLink modal__contentsLink--contents" target=”_blank” rel="noopener noreferrer">実物サイト</a>
+                    </div>
+                </div>
+                <div class="modal__contents">
+                    <h3 class="modal__contentsTtl">［S社］医学生専門塾LP</h3>
+                    <p class="modal__contentsTxt">
+                        コードの可読性・メンテナンス性を意識し、共通パーツを定義及びパーツ毎にSCSSファイルを細かく分割しました。事前にページ全体を通して共通で使えるものがないかを見定める事が自身への課題となりました。
+                    </p>
+                    <ul class="modal__contentsTagWrap">
+                        <li class="modal__contentsTag">HTML</li>
+                        <li class="modal__contentsTag">SCSS</li>
+                        <li class="modal__contentsTag">レスポンシブ</li>
+                    </ul>
+                    <p class="modal__contentsCaption">
+                        制作：2024年<br>
+                        体制：ディレクター1名、エンジニアリーダー1名、コーダー1名（本人）
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

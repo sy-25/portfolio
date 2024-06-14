@@ -1,0 +1,70 @@
+.contact {
+    margin: 115px 0 120px;
+    text-align: center;
+
+    @include sp {
+        margin: 70px 0;
+        padding:0 20px;
+    }
+
+    .contact__heading {
+        @include heading;
+
+        @include sp {
+            @include headingSp;
+        }
+    }
+
+    .contact__ttl {
+        font-size: 34px;
+        font-family: "Zen Old Mincho", serif;
+        line-height: 1.5;
+        margin-bottom: 34px;
+
+        @include sp {
+            font-size: 24px;
+            font-family: "Zen Old Mincho", serif;
+            line-height: 1.5;
+            margin-bottom: 35px;
+        }
+    }
+
+    .contact__txt {
+        margin-bottom: 20px;
+    }
+
+    .contact__btn {
+        display: block;
+        background-color: $gold;
+        margin: 35px auto 0;
+        max-width: 640px;
+        min-height: 64px;
+        position: relative;
+        line-height: 64px;
+        color: #fff;
+        font-weight: bold;
+        @include btn(#a18831);
+
+        @include sp {
+            max-width: none;
+            min-height: 38px;
+            margin-top: 20px;
+            padding: 12px 20px;
+            text-align: left;
+            line-height: 38px;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            background-image: url(../images/icon_arrow_large.svg);
+            background-size: 100%;
+            width: 45px;
+            height: 12px;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

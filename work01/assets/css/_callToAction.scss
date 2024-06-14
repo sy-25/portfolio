@@ -1,0 +1,225 @@
+.callToAction {
+    min-height: 620px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 85px 40px;
+    text-align: center;
+    background-image: url(../images/bg_cta.jpg);
+    background-size: cover;
+
+    @include sp {
+        background-image: url(../images/bg_cta--sp.jpg);
+        padding: 35% 17px 65px;
+    }
+
+    .callToAction__inner {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .callToAction__ttl {
+            color: #fff;
+            font-size: 32px;
+            font-family: "Zen Old Mincho", serif;
+            line-height: 1.3;
+            margin-bottom: 24px;
+
+            @include sp {
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+
+            .callToAction__ttl--strong {
+                font-size: 44px;
+
+                @include sp {
+                    font-size: 40px;
+                }
+
+                .callToAction__ttl--gold {
+                    font-size: 64px;
+
+                    @include sp {
+                        font-size: 58px;
+                    }
+                }
+            }
+
+            .callToAction__ttl--gold {
+                color: $gold;
+            }
+
+            .callToAction__ttl--gold {
+                color: $gold;
+            }
+
+            .callToAction__ttl--small {
+                font-size: 32px;
+
+                @include sp {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .callToAction__txt {
+            color: #fff;
+            margin-bottom: 35px;
+
+            @include sp {
+                text-align: left;
+            }
+        }
+
+        .callToAction__btnList {
+            display: flex;
+            justify-content: center;
+            gap: 0 40px;
+            margin-bottom: 4px;
+
+            @include sp {
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+            }
+
+            .callToAction__btnListItem {
+                margin-bottom: 20px;
+
+                .callToAction__btnLink {
+                    display: flex;
+                    justify-content: center;
+                    font-size: 20px;
+                    font-weight: bold;
+                    min-width: 350px;
+                    min-height: 80px;
+                    gap: 0 10px;
+                    padding: 12px 15px;
+                    align-items: center;
+                    text-align: center;
+
+                    @include sp {
+                        min-height: 60px;
+                        font-size: 14px;
+                        justify-content: left;
+                        padding: 12px 20px;
+                        gap: 0 5px;
+                    }
+                }
+
+                .callToAction__btnLink--document {
+                    background-color: #fff;
+                    position: relative;
+                    @include btn(#d3d3d3);
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 16px;
+                        height: 21px;
+                        background-image: url(../images/icon_document.svg);
+
+                        @include sp {
+                            width: 16px;
+                            height: 12px;
+                        }
+                    }
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 25px;
+                        height: 12px;
+                        background-image: url(../images/icon_arrow_black.svg);
+                        position: absolute;
+                        top: 50%;
+                        right: 20px;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                .callToAction__btnLink--order {
+                    color: #fff;
+                    background-color: $gold;
+                    position: relative;
+                    @include btn(#a18831);
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 22px;
+                        height: 18px;
+                        background-image: url(../images/icon_orderform.svg);
+
+                        @include sp {
+                            width: 15px;
+                            height: 12px;
+                        }
+                    }
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 25px;
+                        height: 12px;
+                        background-image: url(../images/icon_arrow_white.svg);
+                        position: absolute;
+                        right: 20px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+
+        .callToAction__list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 720px;
+            margin: 0 auto;
+            gap: 0 30px;
+            padding: 10px;
+            border-radius: 1000px;
+            border: 2px solid #fff;
+
+            @include sp {
+                max-width: 100%;
+                flex-wrap: wrap;
+                border-radius: 0;
+                text-align: left;
+                padding: 20px;
+            }
+
+            .callToAction__listItem {
+                color: #fff;
+                line-height: 1;
+                align-items: center;
+
+                @include sp {
+                    width: 100%;
+                    text-align: left;
+
+                    &:first-child {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                span {
+                    color: $gold;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 12px;
+                    height: 6px;
+                    border-left: 1px solid #fff;
+                    border-bottom: 1px solid #fff;
+                    transform: rotate(-45deg);
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

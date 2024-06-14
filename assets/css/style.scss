@@ -1,0 +1,586 @@
+@import 'mixin';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #333;
+}
+
+a {
+    color: #333;
+    position: relative;
+}
+
+.headerNav__listItemLink,
+.footer__listItemLink {
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: #333;
+        transition: width 0.3s;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    .headerNav {
+        background-color: #fff;
+        padding: 10px 20px;
+        border-radius: 0 0 0 5px;
+        box-shadow: -5px 5px 3px rgba(0, 0, 0, .1);
+
+        @include sp {
+            width: 100vw;
+            border-radius: 0;
+        }
+    }
+}
+
+.headerNav__list {
+    display: flex;
+    gap: 30px;
+
+    @include sp {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .headerNav__listItem {
+        text-align: center;
+
+        .headerNav__listItemLink {
+            font-size: 16px;
+
+            &.headerNav__listItemLink--about {
+                @include textImg(20px, '../images/about.png');
+            }
+
+            &.headerNav__listItemLink--skill {
+                @include textImg(20px, '../images/skill.png');
+            }
+
+            &.headerNav__listItemLink--work {
+                @include textImg(20px, '../images/work.png');
+            }
+
+            @include sp {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.main {
+    background-color: #efefef;
+    padding: 0 20px;
+
+    .main__ttl {
+        text-align: center;
+        padding: 100px 0;
+        font-size: 45px;
+        font-family: "Josefin Sans", sans-serif;
+        font-style: italic;
+
+        @include sp {
+            font-size: 40px;
+            padding: 150px 0 100px;
+        }
+    }
+}
+
+.section {
+    max-width: 1000px;
+    margin: 0 auto 70px;
+    padding: 40px 40px 60px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+
+    @include sp {
+        margin-bottom: 50px;
+        padding: 40px 20px 60px;
+        border-radius: 5px;
+    }
+
+    .section__ttl {
+        justify-content: center;
+        margin-bottom: 40px;
+        font-size: 30px;
+
+        @include sp {
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .section__anchor {
+        display: block;
+        margin-top: -100px;
+        padding-top: 100px;
+    }
+}
+
+.about {
+
+    .section__ttl {
+        @include textImg(40px, '../images/about.png');
+    }
+
+    .about__contentsWrap {
+        display: flex;
+        gap: 30px;
+
+        @include sp {
+            display: block;
+        }
+    }
+}
+
+.about__contents {
+    margin: 0 auto;
+
+    &.about__contents--img {
+        width: 25%;
+        display: flex;
+        align-items: center;
+
+        @include sp {
+            width: 100%;
+            display: block;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about__contentsImg {
+            width: 100%;
+            border-radius: 50%;
+
+            @include sp {
+                width: 40%;
+            }
+        }
+    }
+
+    &.about__contents--txt {
+        width: 75%;
+
+        @include sp {
+            width: 100%;
+        }
+
+        .about__contentsTxt {
+            line-height: 1.8;
+            font-size: 16px;
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include sp {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.skill {
+
+    .section__ttl {
+        @include textImg(40px, '../images/skill.png');
+    }
+
+    .skill__contents {
+        margin-bottom: 70px;
+
+        @include sp {
+            margin-bottom: 60px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    .skill__contentsTtl {
+        font-size: 20px;
+        margin-bottom: 15px;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background-color: #444;
+            border-radius: 50%;
+            vertical-align: center;
+            margin-right: 10px;
+
+            @include sp {
+                width: 12px;
+                height: 12px;
+            }
+        }
+
+        @include sp {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .skill__contentsTxt {
+        font-size: 16px;
+        margin-bottom: 15px;
+
+        @include sp {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .skill__contentsList {
+
+        .skill__contentsListItem {
+            font-size: 20px;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include sp {
+                font-size: 18px;
+            }
+
+            &.skill__contentsListItem--html {
+                @include textImg(25px, '../images/html5.png');
+            }
+
+            &.skill__contentsListItem--css {
+                @include textImg(25px, '../images/css3.png');
+            }
+
+            &.skill__contentsListItem--scss {
+                @include textImg(25px, '../images/scss.png');
+            }
+
+            &.skill__contentsListItem--js {
+                @include textImg(25px, '../images/js.png');
+            }
+
+            &.skill__contentsListItem--jquery {
+                @include textImg(25px, '../images/jquery.png');
+            }
+
+            &.skill__contentsListItem--vue {
+                @include textImg(25px, '../images/vue.png');
+            }
+
+            &.skill__contentsListItem--aws {
+                @include textImg(25px, '../images/aws.png');
+            }
+
+            &.skill__contentsListItem--vscode {
+                @include textImg(25px, '../images/vscode.png');
+            }
+
+            &.skill__contentsListItem--github {
+                @include textImg(25px, '../images/github.png');
+            }
+
+            &.skill__contentsListItem--ps {
+                @include textImg(25px, '../images/photoshop.png');
+            }
+
+            &.skill__contentsListItem--discord {
+                @include textImg(25px, '../images/discord.png');
+            }
+
+            &.skill__contentsListItem--teams {
+                @include textImg(25px, '../images/teams.png');
+            }
+
+            &.skill__contentsListItem--slack {
+                @include textImg(25px, '../images/slack.png');
+            }
+        }
+    }
+}
+
+.work {
+
+    .section__ttl {
+        @include textImg(40px, '../images/work.png');
+    }
+
+    .work__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+
+        @include sp {
+            display: block;
+        }
+    }
+}
+
+.work__listItem {
+
+    @include sp {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .work__listItemLink {
+        cursor: pointer;
+
+        &:hover {
+
+            .work__listItemLinkImg {
+                transform: scale(1.1);
+
+                @include sp {
+                    transform: none;
+                }
+            }
+        }
+
+        .work__listItemLinkImgWrap {
+            overflow: hidden;
+            margin-bottom: 5px;
+
+            @include sp {
+                margin-bottom: 10px;
+            }
+
+            .work__listItemLinkImg {
+                width: 100%;
+                aspect-ratio: 540/335;
+                transition: transform 0.3s;
+            }
+        }
+
+        .work__listItemLinkTagWrap {
+            font-size: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            .work__listItemLinkTag {
+                display: inline-block;
+                padding: 2px 0;
+                border-radius: 2px;
+                margin: 0 5px 5px 0;
+                text-align: center;
+                background-color: #444;
+                color: #fff;
+                white-space: nowrap;
+
+                &:nth-child(4n) {
+                    margin-right: 0;
+                }
+
+                @include sp {
+                    padding: 6px 0;
+                }
+            }
+        }
+    }
+}
+
+.modal {
+    display: none;
+
+    &.is-show {
+        display: block;
+    }
+
+    .modal__overlay {
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100vw;
+        height: 100vh;
+        cursor: pointer;
+    }
+
+    .modal__contentsWrap {
+        display: none;
+        gap: 20px;
+        z-index: 2;
+        width: calc(100% - 40px);
+        max-width: 1000px;
+        justify-content: center;
+        position: fixed;
+        inset: 0;
+        margin: auto;
+        background-color: #fff;
+        height: fit-content;
+        padding: 40px 30px;
+        border-radius: 10px;
+
+        &.is-show {
+            display: flex;
+        }
+
+        @include sp {
+            overflow-y: scroll;
+            height: 80%;
+            padding: 20px 20px 15px;
+
+            &.is-show {
+                display: block;
+            }
+        }
+    }
+}
+
+.modal__contents {
+    width: 45%;
+
+    @include sp {
+        width: 100%;
+    }
+
+    &:first-child {
+
+        @include sp {
+            margin-bottom: 25px;
+        }
+
+        .modal__contentsImgWrap {
+            margin-bottom: 10px;
+
+            @include sp {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .modal__contentsImg {
+                width: 100%;
+            }
+        }
+
+        .modal__contentsLinkWrap {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            .modal__contentsLink {
+                justify-content: center;
+                font-size: 14px;
+                width: 160px;
+                padding: 5px 0;
+                border-radius: 20px;
+                border: 1px solid #333;
+                box-shadow: 0px 3px rgba(0, 0, 0, .3);
+                transition: box-shadow 0.3s , transform 0.3s;
+
+                @include sp {
+                    padding: 3px 0;
+                    width: 130px;
+                }
+
+                &:hover {
+                    box-shadow: none;
+                    transform: translateY(3px);
+
+                    @include sp {
+                        box-shadow: 0px 3px rgba(0, 0, 0, .3);
+                        transform: none;
+                    }
+                }
+
+                &.modal__contentsLink--github {
+                    @include textImg(20px, '../images/github.png');
+                }
+
+                &.modal__contentsLink--contents {
+                    @include textImg(20px, '../images/window.png');
+                }
+
+                @include sp {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    &:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .modal__contentsTtl {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 20px;
+
+            @include sp {
+                font-size: 16px;
+            }
+        }
+
+        .modal__contentsTxt {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.5;
+
+            @include sp {
+                font-size: 14px;
+                line-height: 1.8;
+                margin-bottom: 22.5px;
+            }
+        }
+
+        .modal__contentsTagWrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            font-size: 10px;
+            margin-bottom: 10px;
+
+            @include sp {
+                margin-bottom: 17.5px;
+            }
+
+            .modal__contentsTag {
+                padding: 2px 0;
+                border-radius: 2px;
+                margin: 0 5px 5px 0;
+                text-align: center;
+                background-color: #444;
+                color: #fff;
+
+                &:nth-child(4n) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .modal__contentsCaption {
+            font-size: 12px;
+            color: #555;
+        }
+    }
+}

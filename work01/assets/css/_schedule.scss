@@ -1,0 +1,112 @@
+.schedule {
+    margin: 115px auto 0;
+
+    @include sp {
+        margin: 70px auto 0;
+        padding: 0 40px;
+    }
+
+    .schedule__heading {
+        text-align: center;
+        @include heading;
+
+        @include sp {
+            @include headingSp;
+        }
+    }
+
+    .schedule__ttl {
+        text-align: center;
+        @include title;
+        margin-bottom: 25px;
+
+        @include sp {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .schedule__txt {
+        max-width: 940px;
+        margin: 0 auto 36px;
+
+        @include sp {
+            margin-bottom: 25px;
+        }
+    }
+
+    .schedule__unit {
+        max-width: 1200px;
+        border-top: 1px solid $borderGray;
+        padding: 31px 0 40px;
+        margin: 0 auto;
+
+        @include sp {
+            padding: 30px 0;
+        }
+
+        &:last-child {
+            border-bottom: 1px solid $borderGray;
+        }
+
+        .schedule__unitInner {
+            max-width: 940px;
+            margin: 0 auto;
+
+            .schedule__unitTtl {
+                font-size: 24px;
+                font-family: "Cormorant Garamond", serif;
+                margin-bottom: 20px;
+                line-height: 1.5;
+
+                @include sp {
+                    font-size: 19px;
+                }
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 108px;
+                    height: 2px;
+                    background-color: $gold;
+                    margin-top: 23px;
+
+                    @include sp {
+                        margin-top: 15px;
+                        width: 100px;
+                    }
+                }
+            }
+
+            .schedule__unitTxt {
+                margin-bottom: 26px;
+                line-height: 2;
+
+                span {
+                    font-weight: bold;
+                }
+            }
+
+            .schedule__unitImgBox {
+
+                @include sp {
+                    margin: 20px -40px 0 0;
+                    overflow-x: scroll;
+                }
+
+                .schedule__unitImg {
+                    width: 100%;
+
+                    @include sp {
+                        width: 950px;
+                    }
+                }
+            }
+
+            .schedule__unitCaption {
+                margin-top: 10px;
+                font-size: 12px;
+            }
+        }
+    }
+}

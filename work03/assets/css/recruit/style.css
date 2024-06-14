@@ -1,0 +1,126 @@
+.lead {
+  background: url("../../images/recruit/mainvisual.png") top center no-repeat #e9f2f4;
+}
+@media screen and (max-width: 768px) {
+  .lead {
+    height: 200px;
+    background-size: cover !important;
+  }
+  .lead .lead__wave {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ttl .ttl__inner {
+    margin-bottom: 24px;
+  }
+}
+
+.recruit {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .recruit {
+    margin-top: 30px;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+.recruit .recruit__txtArea {
+  width: 440px;
+}
+@media screen and (max-width: 768px) {
+  .recruit .recruit__txtArea {
+    width: 100%;
+    order: 2;
+    margin-bottom: 60px;
+  }
+}
+.recruit .recruit__txtArea .section__ttl {
+  margin: 23px 0 30px;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0px;
+}
+@media screen and (max-width: 768px) {
+  .recruit .recruit__img {
+    order: 1;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 481px;
+  }
+}
+
+.btnImportant__inner {
+  width: 1000px;
+  margin: 0 auto;
+  transform: translateY(3px);
+}
+@media screen and (max-width: 768px) {
+  .btnImportant__inner {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+.btnImportant__inner .btnImportant {
+  display: block;
+  max-width: 700px;
+  margin: 60px auto 0;
+}
+@media screen and (max-width: 768px) {
+  .btnImportant__inner .btnImportant {
+    margin-top: 0;
+  }
+  .btnImportant__inner .btnImportant img {
+    margin-top: 12px;
+    width: 100%;
+  }
+}
+
+.offer {
+  margin-bottom: 80px;
+}
+.offer .offer__ttl {
+  text-align: center;
+}
+.offer .offer__txt {
+  margin: 43px auto 40px;
+  width: 600px;
+  font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+  .offer .offer__txt {
+    width: 100%;
+  }
+}
+.offer .offer__list {
+  width: 600px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .offer .offer__list {
+    width: 100%;
+  }
+}
+.offer .offer__list .offer__listItem {
+  border-top: 1px solid #ddd;
+  display: flex;
+  height: 41px;
+}
+.offer .offer__list .offer__listItem:last-child {
+  border-bottom: 1px solid #ddd;
+}
+.offer .offer__list .offer__listItem .section__ttl {
+  width: 140px;
+  font-size: 13px;
+  line-height: 40px;
+  padding-left: 30px;
+}
+.offer .offer__list .offer__listItem .section__txt {
+  font-size: 13px;
+  line-height: 40px;
+}/*# sourceMappingURL=style.css.map */

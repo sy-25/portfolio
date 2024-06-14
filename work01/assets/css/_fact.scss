@@ -1,0 +1,143 @@
+.fact {
+    margin: 195px 40px 110px;
+
+    @include sp {
+        margin: 70px auto;
+    }
+
+    .fact__inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-image: url(../images/bg_fact01.jpg);
+        background-size: contain;
+        background-color: $gray;
+        padding-bottom: 230px;
+
+        @include sp {
+            background-image: url(../images/bg_fact01--sp.jpg);
+            margin: 0 20px;
+            padding-bottom: 160px;
+        }
+
+        .fact__contents {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 50px 105px 0;
+            background-color: $gray;
+            transform: translateY(140px);
+
+            @include sp {
+                width: calc(100% - 20px);
+                margin: 0 auto;
+                padding: 30px 10px 0;
+                transform: translateY(100px);
+            }
+
+            .fact__heading {
+                @include heading;
+
+                @include sp {
+                    @include headingSp;
+                    text-align: center;
+                }
+            }
+
+            .fact__ttl {
+                @include title;
+                @include colorLine;
+                margin-bottom: 34px;
+                padding-bottom: 30px;
+                position: relative;
+                overflow: hidden;
+
+                span {
+                    color: $red;
+                }
+
+                @include sp {
+                    @include titleSp;
+                    text-align: center;
+
+                    &::before {
+                        width: 100px;
+                    }
+                }
+            }
+
+            .fact__txt {
+                font-size: 14px;
+                margin-bottom: 30px;
+
+                span {
+                    color: $gold;
+                    font-weight: bold;
+                }
+            }
+
+            .fact__table {
+                margin-bottom: 5px;
+                width: 100%;
+                line-height: 1.5;
+                font-size: 18px;
+                text-align: left;
+                border: 1px solid $black;
+                background-color: #fff;
+
+                @include sp {
+                    font-size: 12px;
+                }
+
+                .fact__tableBody {
+                    tr {
+                        &:nth-child(even) {
+                            background-color: #f9f6eb;
+                        }
+
+                        th {
+                            font-weight: normal;
+                            padding: 15px 30px;
+                            color: #fff;
+                            background-color: $black;
+                            border-left: 1px solid #fff;
+
+                            @include sp {
+                                padding: 5px 10px;
+                            }
+
+                            &:first-child {
+                                border-left: none;
+                            }
+                        }
+
+                        td {
+                            font-weight: bold;
+                            width: 25%;
+                            padding: 11px 30px;
+                            border: 1px solid $black;
+
+                            @include sp {
+                                padding: 5px 10px;
+                            }
+
+                            span {
+                                font-size: 20px;
+                                color: $red;
+
+                                @include sp {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .fact__tableCaption {
+                @include sp {
+                    font-size: 12px;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+}

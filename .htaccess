@@ -1,0 +1,6 @@
+Options +SymLinksIfOwnerMatch
+RewriteEngine on
+RewriteBase /
+RewriteCond %{HTTP_REFERER} /work03/
+RewriteCond %{REQUEST_URI} !/work03/
+RewriteRule ^(.*)$ work03/$1 [L,R]

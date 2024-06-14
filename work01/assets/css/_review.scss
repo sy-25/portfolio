@@ -1,0 +1,128 @@
+.review {
+    margin: 90px 40px 50px;
+
+    @include sp {
+        margin:70px auto 0;
+    }
+
+    .review__inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-image: url(../images/bg_review.jpg);
+        background-size: contain;
+        background-color: $gray;
+        padding-bottom: 230px;
+
+
+        @include sp {
+            background-image: url(../images/bg_review--sp.jpg);
+            margin: 0 20px;
+            padding-bottom: 160px;
+        }
+
+        .review__contents {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 50px 105px 0;
+            background-color: $gray;
+            transform: translateY(140px);
+
+            @include sp {
+                width: calc(100% - 20px);
+                margin: 0 auto;
+                padding: 30px 10px 0;
+                transform: translateY(100px);
+            }
+
+            .review__heading {
+                @include heading;
+
+                @include sp {
+                    @include headingSp;
+                    text-align: center;
+                }
+            }
+
+            .review__ttl {
+                @include title;
+                @include colorLine;
+                margin-bottom: 34px;
+                padding-bottom: 30px;
+                position: relative;
+                overflow: hidden;
+
+                @include sp {
+                    @include titleSp;
+                    text-align: center;
+
+                    &::before {
+                        width: 100px;
+                    }
+                }
+            }
+
+            .review__lead {
+                font-size: 24px;
+                font-family: "Zen Old Mincho", serif;
+                line-height: 1.5;
+                margin-bottom: 5px;
+
+                span {
+                    color: $gold;
+                }
+
+                strong {
+                    font-size: 34px;
+                }
+            }
+
+            .review__txt {
+                margin-bottom: 35px;
+            }
+
+            .review__list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 40px;
+                justify-content: space-between;
+
+                @include sp {
+                    gap: 20px;
+                }
+
+                .review__listItem {
+                    width: calc(50% - 20px);
+                    padding: 10px 40px 40px;
+                    background-color: #fff;
+
+                    @include sp {
+                        width: 100%;
+                        padding: 20px;
+                    }
+
+                    @include sp {
+                        padding: 20px;
+                    }
+
+                    .review__listItemTtl {
+                        font-size: 24px;
+                        font-family: "Zen Old Mincho", serif;
+                        margin: 15px 0 10px;
+                        line-height: 1.5;
+
+                        span {
+                            color: $gold;
+                        }
+                    }
+
+                    .review__listItemTxt {
+                        line-height: 1.5;
+                        border-bottom: 1px solid $gold;
+                        margin-bottom: 20px;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

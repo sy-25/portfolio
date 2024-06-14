@@ -1,0 +1,269 @@
+@media screen and (max-width: 768px) {
+  .lead {
+    background-size: cover !important;
+  }
+}
+
+.lead.doctor {
+  background: url("../../images/doctor/mainvisual_doctor.png") top center no-repeat #e9f2f4;
+}
+
+.lead.hope {
+  background: url("../../images/doctor/mainvisual_hope.png") top center no-repeat #e9f2f4;
+}
+
+@media screen and (max-width: 600px) {
+  .ttl .ttl__inner .ttl__nav {
+    margin-bottom: 127px;
+  }
+}
+
+.introduction {
+  width: 1000px;
+  margin: 40px auto 0;
+}
+@media screen and (max-width: 768px) {
+  .introduction {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+.introduction .introduction__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.introduction .introduction__inner .introduction__img {
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .introduction .introduction__inner {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .introduction .introduction__inner .introduction__img {
+    width: 100%;
+    max-width: 481px;
+  }
+}
+.introduction .introduction__inner .introduction__txtArea {
+  margin-top: 20px;
+  width: 440px;
+}
+@media screen and (max-width: 768px) {
+  .introduction .introduction__inner .introduction__txtArea {
+    width: 100%;
+  }
+}
+.introduction .introduction__inner .introduction__txtArea .section__ttl {
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 1.2px;
+  margin-bottom: 30px;
+}
+
+.introductionDetail {
+  background-color: #e9f2f4;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 30px 60px;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .introductionDetail {
+    width: 100%;
+    display: block;
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .introductionDetail {
+    padding: 32px 20px 20px;
+  }
+}
+.introductionDetail .career {
+  width: 460px;
+  transform: translateY(15px);
+}
+@media screen and (max-width: 768px) {
+  .introductionDetail .career {
+    width: 100%;
+    margin-bottom: 20px;
+    transform: none;
+  }
+}
+.introductionDetail .career dl dt {
+  width: 99px;
+  float: left;
+  font-size: 16px;
+  color: #339fd1;
+  line-height: 170px;
+  border-right: 1px solid #ddd;
+  font-weight: bold;
+}
+@media screen and (max-width: 480px) {
+  .introductionDetail .career dl dt {
+    width: 100%;
+    float: none;
+    line-height: 40px;
+    border-bottom: 1px solid #ddd;
+    border-right: none;
+    margin-bottom: 10px;
+  }
+}
+.introductionDetail .career dl dd {
+  width: 460px;
+  padding-left: 140px;
+  font-size: 13px;
+  line-height: 28px;
+}
+@media screen and (max-width: 768px) {
+  .introductionDetail .career dl dd {
+    width: 480px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .introductionDetail .career dl dd {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+}
+.introductionDetail .institute {
+  width: 340px;
+}
+@media screen and (max-width: 768px) {
+  .introductionDetail .institute {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .introductionDetail .institute dl {
+    display: block;
+  }
+}
+.introductionDetail .institute dl:last-child {
+  margin-top: 20px;
+}
+.introductionDetail .institute dl:last-child dt {
+  line-height: 100px;
+}
+@media screen and (max-width: 480px) {
+  .introductionDetail .institute dl:last-child dt {
+    line-height: 40px;
+  }
+}
+.introductionDetail .institute dl dt {
+  width: 99px;
+  float: left;
+  font-size: 16px;
+  color: #339fd1;
+  line-height: 70px;
+  border-right: 1px solid #ddd;
+  font-weight: bold;
+}
+@media screen and (max-width: 480px) {
+  .introductionDetail .institute dl dt {
+    width: 100%;
+    float: none;
+    line-height: 40px;
+    border-bottom: 1px solid #ddd;
+    border-right: none;
+    margin-bottom: 10px;
+  }
+}
+.introductionDetail .institute dl dd {
+  width: 340px;
+  padding-left: 140px;
+  font-size: 13px;
+  line-height: 24px;
+}
+@media screen and (max-width: 768px) {
+  .introductionDetail .institute dl dd {
+    width: 480px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .introductionDetail .institute dl dd {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.staffIntroduction {
+  margin-bottom: 83px;
+}
+.staffIntroduction .section__ttl {
+  text-align: left;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .staffIntroduction .staffIntroduction__img {
+    width: 100%;
+  }
+}
+
+.hope {
+  text-align: center;
+}
+.hope .hope__inner {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .hope .hope__inner {
+    display: block;
+    margin-top: 50px;
+  }
+}
+.hope .hope__inner .hope__txtArea {
+  width: 600px;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .hope .hope__inner .hope__txtArea {
+    width: 100%;
+  }
+}
+.hope .hope__inner .hope__txtArea .section__txt {
+  line-height: 34px;
+}
+@media screen and (max-width: 768px) {
+  .hope .hope__inner .hope__txtArea .section__txt {
+    text-align: center;
+    margin: 20px auto 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hope .hope__inner .hope__txtArea .section__txt br {
+    display: none;
+  }
+}
+.hope .hope__inner .hope__txtArea .section__txt span {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #339fd1;
+  letter-spacing: 1.2px;
+  margin: 33px 0;
+}
+.hope .hope__name {
+  margin-top: 60px;
+  text-align: right;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+}
+.hope .hope__img {
+  margin-bottom: -40px;
+}
+@media screen and (max-width: 768px) {
+  .hope .hope__img {
+    margin-bottom: -18px;
+  }
+}/*# sourceMappingURL=style.css.map */

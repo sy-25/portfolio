@@ -1,0 +1,26 @@
+$sp: 768px;
+$blue : #42bad0;
+$blueFont : #339fd1;
+$lightBlue : #e9f2f4;
+
+@mixin sp {
+    @media screen and (max-width: ($sp)) {
+        @content
+    }
+};
+
+@mixin btn{
+    position: absolute;
+
+    & img {
+        position: absolute;
+
+        &.btnImgOn {
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+    & .btnImgOn:hover {
+        opacity: 1;
+    }
+};

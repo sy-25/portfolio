@@ -1,0 +1,128 @@
+.staff {
+    margin-top: 80px;
+    padding: 70px 40px 100px;
+    background-color: $gray;
+
+    @include sp {
+        margin-top: 70px;
+        padding: 30px 20px;
+    }
+
+    .staff__inner {
+        max-width: 1040px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        @include sp {
+            flex-direction: column-reverse;
+        }
+
+        .staff__txtBox {
+            width: calc(100% - 330px);
+            padding-right: 15%;
+
+            @include sp {
+                width: 100%;
+                padding-right: 0;
+            }
+
+            .staff__heading {
+                @include heading;
+
+                @include sp {
+                    @include headingSp;
+                }
+            }
+
+            .staff__ttl {
+                @include title;
+                position: relative;
+                padding-bottom: 30px;
+                margin-bottom: 35px;
+                @include colorLine;
+
+                @include sp {
+                    @include titleSp;
+                }
+            }
+
+            .staff__list {
+                display: flex;
+                flex-wrap: wrap;
+
+                @include sp {
+                    width: 100%;
+                    justify-content: space-between;
+                }
+
+                .staff__listItem {
+                    width: 30%;
+                    padding-right: 10px;
+
+                    @include sp {
+                        width: 48%;
+                        padding-right: 0;
+                        margin-bottom: 20px;
+
+                        &:last-child {
+                            padding-top: 30px;
+                        }
+                    }
+
+                    .staff__listItemName {
+                        font-size: 24px;
+                        font-family: "Zen Old Mincho", serif;
+                        font-weight: bold;
+
+                        @include sp {
+                            font-size: 20px;
+                        }
+                    }
+
+                    .staff__listItemData {
+
+                        dt {
+                            font-size: 18px;
+                            font-family: "Zen Old Mincho", serif;
+                            font-weight: bold;
+                            line-height: 1.4;
+                            margin: 30px 0 10px;
+                            padding-left: 10px;
+                            border-left: 2px solid $gold;
+
+                            @include sp {
+                                font-size: 16px;
+                                margin: 20px 0 10px;
+                            }
+                        }
+
+                        dd {
+                            padding-left: 10px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+
+        .staff__imgBox {
+            width: 46%;
+            max-width: 480px;
+            margin: -100px -120px 0 0;
+            position: relative;
+
+            @include sp {
+                width: 100%;
+                max-width: none;
+                margin: 0 0 40px;
+            }
+
+            .staff__img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

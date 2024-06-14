@@ -1,0 +1,25 @@
+@import 'mixin';
+@import 'main';
+
+body {
+    line-height: 1.8;
+    font-weight: 400;
+    font-family: "Noto Sans JP", "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
+}
+
+main {
+    overflow-x: hidden;
+    position: relative;
+}
+
+ul , ol {
+    list-style: none;
+}
+img {
+    vertical-align: bottom;
+    width: 100%;
+}
+
+a {
+    cursor: pointer;
+}

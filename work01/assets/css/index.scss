@@ -1,0 +1,55 @@
+@import 'mixin';
+@import 'header';
+@import 'kv';
+@import 'point';
+@import 'fact';
+@import 'merit';
+@import 'staff';
+@import 'step';
+@import 'review';
+@import 'schedule';
+@import 'flow';
+@import 'plan';
+@import 'real';
+@import 'contact';
+@import 'footer';
+@import 'callToAction';
+
+body {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, Arial, Helvetica, Verdana, "ＭＳ Ｐゴシック", sans-serif, "ＭＳ Ｐゴシック", "MS PGothic";
+    font-size: 14px;
+    line-height: 2;
+    width: 100%;
+    color: $black;
+    font-weight: 400;
+}
+
+main {
+    overflow: hidden;}
+
+ul , ol {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.sp {
+    display: none;
+
+    @include sp {
+        display: block;
+    }
+}
+
+.pc {
+    @include sp {
+        display: none;
+    }
+}
