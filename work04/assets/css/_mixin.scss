@@ -1,0 +1,72 @@
+$mediaQuerySpSmall : 577px;
+$mediaQuerySp : 767px;
+$mediaQueryPcSmall : 991px;
+$mediaQueryPcMedium : 1199px;
+$mediaQueryPcLarge : 1400px;
+$mainColor : #0747ad;
+$subColor : #ffe952;
+$attentionColor: #dc3545;
+
+@mixin mediaQuerySpSmall {
+    @media screen and (max-width: ($mediaQuerySpSmall)) {
+        @content
+    }
+}
+
+;
+
+@mixin mediaQuerySp {
+    @media screen and (max-width: ($mediaQuerySp)) {
+        @content
+    }
+}
+
+;
+
+@mixin mediaQueryPcSmall {
+    @media screen and (min-width: ($mediaQueryPcSmall)) {
+        @content
+    }
+}
+
+;
+
+@mixin mediaQueryPcMedium {
+    @media screen and (min-width: ($mediaQueryPcMedium)) {
+        @content
+    }
+}
+
+;
+
+@mixin mediaQueryPcLarge {
+    @media screen and (min-width: ($mediaQueryPcLarge)) {
+        @content
+    }
+}
+
+;
+
+@mixin filmBackDecoration($top: 40px, $margin: 10px, $height : 40px) {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: $top;
+        left: $margin;
+        content: '';
+        background: url(../images/film.png) repeat-y;
+        width: 15px;
+        height: calc(100% - $height);
+    }
+
+    &::after {
+        position: absolute;
+        top: $top;
+        right: $margin;
+        content: '';
+        background: url(../images/film.png) repeat-y;
+        width: 15px;
+        height: calc(100% - $height);
+    }
+}
