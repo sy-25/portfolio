@@ -1,0 +1,67 @@
+.buttonInfo {
+    @include WidthConfig;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+
+    @include bp {
+        flex-direction: column;
+    }
+
+
+    & .buttonQa {
+        @include button;
+        @include buttonArrow;
+        width: 380px;
+        transition: background-color 0.3s;
+
+        @include bp {
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        &:hover {
+            background-color: #FFF;
+        }
+
+        & .buttonQa__link {
+            font-size: 44px;
+            color: #050F5D;
+            font-weight: bold;
+            text-decoration: none;
+
+            @include bp {
+                @include fontVw(42)
+            }
+        }
+    }
+
+    & .buttonExam {
+        @include button;
+        @include buttonArrow;
+        width: 380px;
+        transition: background-color 0.3s;
+
+        @include bp {
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        &:hover {
+            background-color: #FFF;
+        }
+
+        & .buttonExam__link {
+            font-size: 44px;
+            color: #050F5D;
+            font-weight: bold;
+            text-decoration: none;
+
+            @include bp {
+                @include fontVw(42)
+            }
+        }
+    }
+}

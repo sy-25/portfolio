@@ -1,0 +1,104 @@
+.header {
+    text-align: right;
+
+    .header__img {
+        margin: 30px 140px 0 0;
+        width: 230px;
+
+        @include bp {
+            @include imgVw(440);
+            margin: 20px 20px 0 0;
+        }
+    }
+}
+
+
+.pageTop {
+    height: 320px;
+    position: relative;
+
+    @include bp {
+        height: 470px;
+        margin-top: 100px;
+    }
+
+    & .pageTop__ttl {
+        margin: 0 0 30px 150px;
+        font-size: 74px;
+        font-weight: bold;
+        color: #050F5D;
+
+        @include bp {
+            margin: 0 0 50px 20px;
+            @include fontVw(74);
+        }
+    }
+
+    & .pageTop__txt {
+        margin: 0 0 30px 150px;
+        font-size: 30px;
+        font-weight: bold;
+        color: #050F5D;
+        position: relative;
+        z-index: 1;
+
+        @include bp {
+            margin-left: 20px;
+            @include fontVw(40);
+        }
+
+        & .pageTop__txt--yellowLine {
+            position: absolute;
+            height: 12px;
+            background-color: yellow;
+            z-index: -1;
+            left: 0;
+            bottom: 5px;
+
+            @include bp {
+                bottom: 0px;
+            }
+        }
+
+        & .pageTop__txt--yellowLineLong {
+            width: 300px;
+
+            @include bp {
+                @include imgVw(420);
+            }
+        }
+
+        & .pageTop__txt--yellowLineShort {
+            width: 180px;
+
+            @include bp {
+                @include imgVw(250);
+            }
+        }
+    }
+
+
+
+    & .pageTop__img {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        transform: translateY(44.5%);
+
+        @include bp {
+            display: none;
+        }
+    }
+
+    & .pageTop__img--sp {
+        display: none;
+
+        @include bp {
+            display: block;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            transform: translateY(46.53%);
+        }
+    }
+}

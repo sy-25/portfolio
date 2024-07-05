@@ -1,0 +1,192 @@
+.messageWrap {
+    @include WidthConfig;
+    padding: 0 50px;
+
+    @include bp {
+        padding: 0 20px;
+    }
+
+    & .message__copy {
+        text-align: center;
+        font-size: 48px;
+        color: #FFF;
+        font-weight: bold;
+        margin-bottom: 66px;
+        position: relative;
+
+        @include bp {
+            margin-bottom: 87px;
+        }
+
+        &::after {
+            content: '';
+            width: 100px;
+            height: 6px;
+            background-color: #FDDC00;
+            position: absolute;
+            bottom: -20px;
+            left: calc(50% - 50px);
+        }
+    }
+
+    & .message {
+        background-color: #FFF;
+        overflow: hidden;
+        border-radius: 20px;
+        margin-bottom: 60px;
+
+        & .message__heading {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 60px;
+            background-color: #FDDC00;
+            color: #050F5D;
+            width: 278px;
+            height: 60px;
+            border-bottom-right-radius: 20px;
+
+            & span {
+                margin-left: 40px;
+            }
+
+            @include bp {
+                @include fontVw(36);
+                width: 60%;
+                height: 80px;
+                line-height: 80px;
+            }
+        }
+
+
+        & .messageInner {
+            display: flex;
+            padding: 47px 60px 64px;
+
+            @include bp {
+                flex-direction: column;
+                padding: 45px 40px 60px 40px;
+            }
+
+            & .message__item {
+
+                & .message__ttl {
+                    color: #050F5D;
+                    font-size: 28px;
+                    font-weight: bold;
+                    margin-bottom: 25px;
+
+                    @include bp {
+                        @include fontVw(32);
+                    }
+                }
+
+                & .message__txt {
+                    font-size: 16px;
+                    line-height: 2;
+
+                    @include bp {
+                        @include fontVw(24);
+                        line-height: 1.667;
+                        margin-bottom: 36px;
+                    }
+                }
+
+                &:first-child {
+                    padding-right: 43px;
+                    width: 60%;
+
+                    @include bp {
+                        padding-right: 0;
+                        width: 100%;
+                    }
+                }
+
+                &:nth-child(2) {
+                    text-align: center;
+                    width: 36%;
+
+                    @include bp {
+                        width: 100%;
+                    }
+                }
+
+                & .message__img {
+                    width: 100%;
+                    margin-bottom: 31px;
+
+                    @include bp {
+                        @include imgVw(350);
+                        margin-bottom: 24px;
+                    }
+                }
+
+
+                & .message__caption {
+                    font-size: 16px;
+                    line-height: 1.75;
+
+                    @include bp {
+                        @include fontVw(24);
+                        line-height: 1.667;
+                    }
+                }
+            }
+        }
+    }
+
+    & .messageButton {
+        @include button($color: #050F5D);
+        @include buttonArrow;
+        display: block;
+        margin: 61px auto 101px;
+        width: 390px;
+        height: 86px;
+        cursor: pointer;
+        border: 1px solid #FFF;
+        transition: background-color 0.3s;
+
+        @include bp {
+            width: 95%;
+            height: 120px;
+            border-radius: 60px;
+            margin: 63px auto 122px;
+        }
+
+
+        &::after {
+            border-top: 3px solid #FFF;
+            border-right: 3px solid #FFF;
+            width: 15px;
+            height: 15px;
+            bottom: 32px;
+            transition: border-top 0.3s, border-right 0.3s;
+            @include bp {
+                bottom: 50px;
+            }
+        }
+        &:hover::after {
+            border-top: 3px solid #050F5D;
+            border-right: 3px solid #050F5D;
+        }
+        &:hover {
+            background-color: #FFF;
+
+            & .messageButton__link {
+                color: #050F5D;
+            }
+        }
+
+        & .messageButton__link {
+            color: #FFF;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.6;
+            text-decoration: none;
+            transition: color 0.3s;
+
+            @include bp {
+                @include fontVw(32);
+            }
+        }
+    }
+}

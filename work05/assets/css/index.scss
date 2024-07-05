@@ -1,0 +1,29 @@
+@import 'mixin';
+@import 'headerPageTop';
+@import 'intro';
+@import 'infoWrap';
+@import 'modal';
+@import 'pointWrap';
+@import 'messageWrap';
+@import 'buttonInfo';
+@import 'buttonWrap';
+@import 'footer';
+
+body {
+    font-family: "Meiryo";
+    min-width: 1200px;
+    @include bp {
+        min-width: 100%;
+    }
+}
+img {
+	vertical-align: bottom;
+}
+
+li {
+    list-style: none;
+}
+
+.main--bgcBlue {
+    background-color: #050F5D;
+}

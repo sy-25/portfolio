@@ -1,0 +1,151 @@
+$maxWidth : 1200px;
+$pcMin : 1080px;
+$sp : 768px;
+
+@mixin bp {
+    @media screen and (max-width: ($sp)) {
+        @content
+    }
+}
+
+;
+
+@mixin WidthConfig {
+    max-width: $maxWidth;
+    min-width: $pcMin;
+    margin: 0 auto;
+    @include bp {
+        min-width: auto;
+    }
+}
+
+;
+
+@mixin button($height: 105px, $radius: 50px, $color: #FDDC03) {
+    height: $height;
+    border-radius: $radius;
+    background-color: $color;
+    box-shadow: none;
+    border: 5px solid #FDDC03;
+    cursor: pointer;
+}
+
+@mixin buttonArrow {
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: 30px;
+        bottom: 37px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-top: 5px solid #050F5D;
+        border-right: 5px solid #050F5D;
+        transform: rotate(45deg);
+    }
+}
+
+@mixin accordion {
+    input {
+        display: none;
+    }
+
+    .pointAcButton {
+        display: block;
+        height: 60px;
+        background: #4D588E;
+        color: #fff;
+        margin-bottom: 1px;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            display: block;
+            background-color: #FDDC08;
+            position: absolute;
+            width: 16px;
+            height: 60px;
+            left: 0;
+        }
+
+        &::after {
+            content: '+';
+            font-size: 32px;
+            display: block;
+            padding: 10px 20px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+ 
+        }
+        & .pointAcButton__txt {
+            position: absolute;
+            top: 50%;
+            left: 60px;
+            transform: translateY(-50%);
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 0.625;
+
+            @include bp {
+                @include fontVw(32);
+            }
+
+            & span {
+                background-color: #FDDC08;
+                color: #050F5D;
+                font-size: 20px;
+                font-weight: bold;
+                margin-left: 21px;
+                padding: 4px 8px;
+                border-radius: 5px;
+                vertical-align: middle;
+
+                @include bp {
+                    @include fontVw(20);
+                    left: 30px;
+                }
+            }
+
+
+            @include bp {
+                left: 30px;
+            }
+        }
+    }
+
+    .ac__content {
+        display: none;
+    }
+
+    .accordionCheck:checked {
+        & + .pointAcButton::after {
+            content: '―';
+        }
+    }
+}
+
+
+@function _get_vw($size, $viewport) {
+    $rate: calc(100 / $viewport);
+    @return $rate * $size * 1vw;
+  }
+
+@mixin fontVw($fontSize: 10) {
+    font-size: _get_vw($fontSize, 750);
+  }
+  
+
+@mixin imgVw($imgSize: 400) {
+    width: _get_vw($imgSize, 750);
+  }
+
+  @mixin circle($imgSize: 400) {
+    width: _get_vw($imgSize, 750);
+    height: _get_vw($imgSize, 750);
+    line-height: _get_vw($imgSize, 750);
+  }

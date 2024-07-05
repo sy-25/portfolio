@@ -1,0 +1,89 @@
+.infoWrap {
+    @include WidthConfig;
+    padding: 0 50px;
+    margin-bottom: 60px;
+    border-radius: 20px;
+
+    & .info {
+        background-color: #FFF;
+        border-radius: 20px;
+
+        & .info__heading {
+            text-align: center;
+            color: #050F5D;
+            position: relative;
+            font-size: 36px;
+            font-weight: bold;
+            z-index: 1;
+            padding-top: 70px;
+
+            @include bp {
+                @include fontVw(42);
+            }
+
+            & span {
+                margin-left: 40px;
+            }
+    
+    
+            &::before {
+                content: 'Check';
+                position: absolute;
+                background-color: yellow;
+                width: 100px;
+                height: 100px;
+                font-size: 24px;
+                line-height: 100px;
+                border-radius: 50%;
+                text-align: center;
+                transform: rotate(-28.07deg) translate(-20% , -60%);
+                z-index: -1;
+
+                @include bp {
+                    @include fontVw(28);
+                    @include circle(120);
+                }
+            }
+        }
+    
+        & .infoList {
+            display: grid;
+            width: 780px;
+            color: #050F5D;
+            margin: 0 auto;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            padding:30px 0 50px;
+    
+            @include bp {
+                width: 90%;
+                grid-template-columns: 1fr 1fr;
+            }
+    
+            & .infoList__item {
+                text-align: center;
+    
+                & .infoList__img--person {
+                    display: block;
+                    width: 100%;
+                    margin: 0 auto 10px;
+                }
+    
+                & .infoList__img--more {
+                    margin-bottom: 20px;
+                    cursor: pointer;
+                }
+    
+                & .infoList__caption {
+                    font-size: 18px;
+                    font-weight: bold;
+                    line-height: 1.333;
+
+                    @include bp {
+                        @include fontVw(24);
+                    }
+                }
+            }
+        }
+    }
+}

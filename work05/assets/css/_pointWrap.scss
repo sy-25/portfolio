@@ -1,0 +1,1014 @@
+.pointWrap {
+    @include WidthConfig;
+    margin-top: 102px;
+    padding: 0 50px;
+
+    @include bp {
+        padding: 0 20px;
+    }
+
+    & .pointHeader {
+        position: relative;
+        margin: 0 15px 117px;
+
+        @include bp {
+            margin-bottom: 154px;
+        }
+
+        & .pointHeader__hand {
+            position: absolute;
+        }
+
+        & .pointHeader__leftHand {
+            left: 0;
+            bottom: 0;
+
+            @include bp {
+                display: none;
+            }
+        }
+
+        & .pointHeader__leftHand--sp {
+            display: none;
+
+            @include bp {
+                display: block;
+                @include imgVw(105);
+                left: -10px;
+                bottom: 0;
+            }
+        }
+
+        & .pointHeader__rightHand {
+            right: 0;
+            bottom: 0;
+
+            @include bp {
+                display: none;
+            }
+        }
+
+        & .pointHeader__rightHand--sp {
+            display: none;
+
+            @include bp {
+                display: block;
+                @include imgVw(105);
+                right: -10px;
+                bottom: 0;
+            }
+        }
+
+        & .pointHeader__txt {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            color: #FFF;
+            margin-bottom: 31px;
+
+            @include bp {
+                @include fontVw(48);
+                margin-bottom: 20px;
+            }
+
+
+            & .pointHeader--yellow {
+                color: yellow;
+
+                @include bp {
+                    display: inline-block;
+                }
+            }
+        }
+
+        & .pointHeader__txt--yellowLine {
+            text-align: center;
+            width: 390px;
+            margin: 0 auto;
+            color: #FFF;
+            border-bottom: 6px solid yellow;
+            font-size: 50px;
+            font-weight: bold;
+
+            @include bp {
+                @include fontVw(50);
+                @include imgVw(370);
+            }
+
+            & .pointHeader--impact {
+                color: yellow;
+                font-size: 80px;
+
+                @include bp {
+                    @include fontVw(80);
+                }
+
+            }
+        }
+    }
+
+    & .point {
+        background-color: #FFF;
+        margin-bottom: 100px;
+        border-radius: 20px;
+        position: relative;
+
+        & .point__heading {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "DINNextLTPro";
+            text-align: center;
+            width: 225px;
+            height: 62px;
+            line-height: 62px;
+            background-color: yellow;
+            position: absolute;
+            left: 63px;
+            transform: translateY(-30px);
+
+            @include bp {
+                @include fontVw(35);
+                @include imgVw(400);
+                left: 50%;
+                height: 60px;
+                transform: translate(-50%, -50%);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: -30px;
+                border-top: 30px solid transparent;
+                border-right: 30px solid #FBBE00;
+
+                @include bp {
+                    border-top: 30px solid transparent;
+                    border-right: 30px solid #FBBE00;
+                }
+            }
+
+            & .point__heading--star {
+                vertical-align: baseline;
+                transform: translate(-7px, 3px);
+            }
+
+            & .point__heading--impact {
+                font-size: 28px;
+
+                @include bp {
+                    @include fontVw(50);
+                }
+            }
+        }
+
+        & .pointInner {
+            padding: 100px 100px 80px;
+
+            @include bp {
+                padding: 98px 40px 60px;
+            }
+
+            & .point__ttl {
+                font-size: 42px;
+                font-weight: bold;
+                color: #050F5D;
+                border-bottom: 2px solid #050F5D;
+                padding-bottom: 14px;
+                margin-bottom: 27px;
+
+                @include bp {
+                    @include fontVw(46);
+                    line-height: 1.304;
+                    border-bottom: 4px solid #050F5D;
+                }
+            }
+
+            & .pointMain {
+
+                & .point__txt {
+                    font-size: 20px;
+                    font-weight: bold;
+                    line-height: 1.8;
+                    margin-bottom: 16px;
+
+                    @include bp {
+                        @include fontVw(28);
+                        line-height: 1.571;
+                        margin-bottom: 31px;
+                    }
+                }
+
+                & .point__txt--small {
+                    font-size: 16px;
+
+                    @include bp {
+                        @include fontVw(24);
+                        line-height: 2;
+                    }
+
+                    & small {
+                        font-size: 8px;
+                        vertical-align: top;
+
+                        @include bp {
+                            @include fontVw(12);
+                        }
+                    }
+                }
+
+                & .point1Wrap {
+                    display: flex;
+                    margin-top: 45px;
+
+                    @include bp {
+                        flex-direction: column;
+                        margin-top: 64px;
+                    }
+
+                    & .point1Feature {
+                        width: 62.5%;
+
+                        @include bp {
+                            width: 100%;
+                            overflow-x: scroll;
+                        }
+
+                        & .point1Feature__ttl {
+                            font-size: 20px;
+                            font-weight: bold;
+                            line-height: 2.4;
+                            color: #050F5D;
+                            margin-bottom: 17px;
+
+                            @include bp {
+                                font-size: 28px;
+                                margin-bottom: 42px;
+                            }
+                        }
+
+                        & .point1Feature__img {
+                            width: 100%;
+
+                            @include bp {
+                                width: auto;
+                            }
+                        }
+                    }
+
+                    & .point1Topic {
+                        width: 37.5%;
+                        border-radius: 20px;
+                        background-color: #FEF8D7;
+                        margin: 65px 0 0 54px;
+                        padding: 31px 28px 19px 32px;
+
+                        @include bp {
+                            width: 100%;
+                            margin: 60px 0 0 0;
+                            padding: 0;
+                        }
+
+                        & .point1Topic__heading {
+                            font-size: 20px;
+                            font-weight: bold;
+                            line-height: 2.4;
+
+                            @include bp {
+                                @include fontVw(28);
+                                padding: 41px 0 17px 43px;
+                            }
+                        }
+
+                        & .point1Topic__ttl {
+                            font-size: 20px;
+                            font-weight: bold;
+
+                            @include bp {
+                                @include fontVw(28);
+                                padding-left: 43px;
+                            }
+                        }
+
+                        & .point1Topic__txt {
+                            font-size: 16px;
+                            line-height: 1.75;
+
+                            @include bp {
+                                @include fontVw(24);
+                                line-height: 1.667;
+                                padding: 25px 40px 40px 40px;
+                            }
+                        }
+                    }
+                }
+
+                & .point2Wrap {
+                    display: flex;
+                    margin-top: 40px;
+
+                    @include bp {
+                        flex-direction: column;
+                    }
+
+                    & .point2Feature {
+                        width: 62.5%;
+
+                        @include bp {
+                            width: 100%;
+                            overflow-x: scroll;
+                        }
+
+                        & .point2Feature__ttl {
+                            font-size: 20px;
+                            color: #050F5D;
+                            font-weight: bold;
+                            margin-bottom: 20px;
+                        }
+
+                        & .point2Feature__img {
+                            display: block;
+                            width: 100%;
+                            margin-bottom: 20px;
+
+                            @include bp {
+                                width: auto;
+                            }
+                        }
+
+                        & .point2Feature__caption {
+                            font-size: 14px;
+                            line-height: 1.429;
+                        }
+                    }
+
+                    & .point2Topic {
+                        width: 37.5%;
+                        border-radius: 20px;
+                        background-color: #FEF8D7;
+                        margin: 30px 0 0 54px;
+                        padding: 31px 28px 37px 32px;
+
+                        @include bp {
+                            width: 100%;
+                            margin-left: 0;
+                            padding: 0;
+                        }
+
+                        & .point2Topic__heading {
+                            font-size: 20px;
+                            font-weight: bold;
+                            margin-bottom: 18px;
+
+                            @include bp {
+                                @include fontVw(28);
+                                padding: 41px 0 0 43px;
+                            }
+                        }
+
+                        & .point2Topic__ttl {
+                            font-size: 20px;
+                            font-weight: bold;
+                            margin: 0 0 24px 5px;
+
+                            @include bp {
+                                @include fontVw(28);
+                                margin: 0;
+                                padding: 0 0 25px 43px;
+                            }
+                        }
+
+                        & .point2Topic__txt {
+                            font-size: 16px;
+                            line-height: 1.75;
+                            margin-bottom: 30px;
+
+                            @include bp {
+                                @include fontVw(24);
+                                line-height: 1.667;
+                                padding: 0 44px 0 43px;
+
+                            }
+                        }
+
+                        & .point2Topic__img {
+                            display: block;
+                            margin: 0 auto;
+                            width: 100%;
+                            margin-bottom: 20px;
+
+                            @include bp {
+                                width: 90%;
+                                margin-bottom: 43px;
+                            }
+                        }
+
+                        & .point2Topic__caption {
+                            display: block;
+                            font-size: 14px;
+                            line-height: 1.714;
+
+                            @include bp {
+                                @include fontVw(24);
+                                margin: 0 43px 45px;
+                            }
+                        }
+                    }
+                }
+
+                & .point3Wrap {
+                    display: flex;
+                    margin: 42px 0 49px;
+
+                    @include bp {
+                        flex-direction: column;
+                    }
+
+                    & .point3Feature {
+                        width: 40%;
+
+                        @include bp {
+                            width: 100%;
+                        }
+
+                        & .point3Feature__ttl {
+                            font-size: 20px;
+                            color: #050F5D;
+                            font-weight: bold;
+                            margin-bottom: 17px;
+
+                            @include bp {
+                                font-size: 28px;
+                                line-height: 1.714;
+                            }
+                        }
+
+                        & .point3Feature__img {
+                            width: 100%;
+
+                            @include bp {
+                                margin-bottom: 63px;
+                            }
+                        }
+                    }
+
+                    & .point3Topic {
+                        width: 60%;
+                        background-color: #FEF8D7;
+                        margin: 34px 0 0 42px;
+                        padding: 31px 32px 16px 42px;
+                        border-radius: 20px;
+
+                        @include bp {
+                            width: 100%;
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                        & .point3Topic__heading {
+                            font-size: 20px;
+                            font-weight: bold;
+                            margin-bottom: 20px;
+
+                            @include bp {
+                                @include fontVw(28);
+                                margin: 41px 0 17px 43px;
+                            }
+                        }
+
+                        & .point3TopicWrap {
+                            display: flex;
+
+                            @include bp {
+                                flex-direction: column;
+                            }
+
+                            & .point3Topic__item {
+                                &:first-child {
+
+                                    @include bp {
+                                        padding: 0 43px 40px;
+                                    }
+                                }
+
+                                &:last-child {
+                                    margin-left: 27px;
+
+                                    @include bp {
+                                        padding: 0 43px 40px;
+                                        margin-left: 0;
+                                    }
+                                }
+                            }
+
+                            & .point3Topic__ttl {
+                                font-size: 20px;
+                                font-weight: bold;
+                                margin-bottom: 24px;
+
+                                @include bp {
+                                    @include fontVw(28);
+                                }
+                            }
+
+                            & .point3Topic__txt {
+                                font-size: 16px;
+                                line-height: 1.75;
+
+                                @include bp {
+                                    @include fontVw(24);
+                                    line-height: 1.667;
+                                }
+                            }
+
+                            & .point3Topic__img {
+                                margin-bottom: 20px;
+
+                                @include bp {
+                                    width: 100%;
+                                }
+                            }
+
+                            & .point3Topic__caption {
+                                display: block;
+                                font-size: 16px;
+                                font-weight: bold;
+                                text-align: right;
+
+                                @include bp {
+                                    @include fontVw(24);
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                & .point3Ac {
+                    @include accordion;
+
+                    & .point3AcInner {
+                        display: flex;
+                        margin-top: 40px;
+                        justify-content: space-between;
+
+                        @include bp {
+                            flex-direction: column;
+                        }
+
+                        & .point3Ac__item {
+                            width: 49%;
+                            border: 1px solid #ccc;
+                            border-radius: 10px;
+                            overflow: hidden;
+
+                            @include bp {
+                                width: 100%;
+                                margin: 0 auto;
+
+                                &:last-child {
+                                    margin-top: 20px;
+                                }
+
+                            }
+
+                            & .point3Ac__ttl {
+                                text-align: center;
+                                background-color: #ccc;
+                                color: #050F5D;
+                                font-size: 24px;
+                                font-weight: bold;
+                                padding: 20px;
+
+                                @include bp {
+                                    @include fontVw(40);
+                                    font-weight: normal;
+                                }
+                            }
+
+                            & .point3Ac__itemWrap {
+                                padding: 20px;
+
+                                & .point3Ac__txt {
+                                    padding: 43px 43px 0;
+                                    margin-bottom: 40px;
+                                    font-size: 16px;
+                                    line-height: 1.75;
+
+                                    @include bp {
+                                        @include fontVw(22)
+                                    }
+                                }
+
+                                & .point3AcList {
+                                    padding: 0 43px 43px 43px;
+
+                                    & .point3AcList__item {
+                                        &::before {
+                                            display: inline-block;
+                                            content: '';
+                                            width: 15px;
+                                            height: 15px;
+                                            background-color: #050F5D;
+                                            border-radius: 50%;
+                                        }
+
+                                        & .point3AcList__ttl {
+                                            display: inline-block;
+                                            font-size: 24px;
+                                            font-weight: bold;
+                                            color: #050F5D;
+                                            margin-bottom: 14px;
+
+                                            @include bp {
+                                                @include fontVw(22);
+                                            }
+                                        }
+
+                                        & .point3AcList__txt {
+                                            font-size: 24px;
+                                            font-weight: bold;
+                                            color: #050F5D;
+                                            margin: 0 0 10px 20px;
+                                            line-height: 40px;
+
+                                            @include bp {
+                                                @include fontVw(22);
+                                            }
+
+                                            & .point3AcList__txt--large {
+                                                font-size: 35px;
+
+                                                @include bp {
+                                                    @include fontVw(40);
+                                                }
+                                            }
+                                        }
+
+                                        & .point3AcList__caption {
+                                            display: block;
+                                            font-size: 14px;
+                                            color: #050F5D;
+                                            margin: 0 0 20px 20px;
+
+                                            @include bp {
+                                                @include fontVw(20);
+                                            }
+                                        }
+
+                                        &:last-child .point3AcList__caption {
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            & .point4Feature {
+                margin-top: 40px;
+
+                @include bp {
+                    overflow-x: scroll;
+                }
+
+                & .point4Feature__ttl {
+                    font-size: 20px;
+                    color: #050F5D;
+                    font-weight: bold;
+                    line-height: 2.4;
+                    margin-bottom: 20px
+                }
+
+            }
+
+            & .point4Ac {
+                margin-top: 60px;
+                @include accordion;
+
+                & .point4AcList {
+                    padding-top: 30px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+
+                    @include bp {
+                        flex-direction: column;
+                    }
+
+                    & .point4AcList__item {
+                        font-size: 16px;
+                        width: 33%;
+                        margin-bottom: 10px;
+
+                        @include bp {
+                            width: 100%;
+                            @include fontVw(24);
+                            transform: translateX(5px);
+                        }
+
+                        & .point4AcList__item--dot {
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 4px;
+                            height: 4px;
+                            border-radius: 50%;
+                            background-color: #000;
+                            transform: translate(-5px,-2px);
+                        }
+                    }
+                }
+            }
+
+            & .point5Feature {
+                margin-top: 43px;
+
+                & .point5Feature__ttl {
+                    font-size: 20px;
+                    color: #050F5D;
+                    font-weight: bold;
+                    line-height: 2.4;
+
+                    @include bp {
+                        @include fontVw(28);
+                    }
+                }
+
+                & .point5FeatureList {
+                    padding: 30px 0 20px;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+
+                    & .point5FeatureList__item {
+                        font-size: 20px;
+                        height: 60px;
+                        display: table-cell;
+                        text-align: center;
+                        line-height: 60px;
+
+                        @include bp {
+                            @include fontVw(25);
+                        }
+
+                        &:nth-child(3n - 2) {
+                            font-weight: bold;
+                            color: #050F5D;
+                        }
+
+                        &:nth-child(-n + 3) {
+                            background-color: #CFD1E0;
+                            color: #050F5D;
+                            font-weight: bold;
+                        }
+
+                        &:nth-child(n + 7):nth-child(-n + 9) {
+                            background-color: #F3F4F7;
+                        }
+
+                        &:nth-child(n + 13):nth-child(-n + 15) {
+                            background-color: #F3F4F7;
+                        }
+
+                        &:nth-child(n + 19):nth-child(-n + 21) {
+                            background-color: #F3F4F7;
+                        }
+
+                        &:nth-child(n + 25):nth-child(-n + 27) {
+                            background-color: #F3F4F7;
+                        }
+                    }
+                }
+
+                & .point5Feature__caption {
+                    display: block;
+                    text-align: right;
+                    font-size: 14px;
+                    margin-bottom: 60px;
+
+                    @include bp {
+                        @include fontVw(20);
+                    }
+                }
+            }
+
+            & .point5Ac {
+                @include accordion;
+
+
+
+                & .point5AcInner {
+                    margin-top: 60px;
+
+                    @include bp {
+                        margin-top: 40px;
+                    }
+
+                    & .point5AcList {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        & .point5AcList__item {
+                            display: flex;
+                            width: 50%;
+                            margin-bottom: 40px;
+                            color: #050F5D;
+
+                            @include bp {
+                                width: 100%;
+                            }
+
+                            & .point5AcList__ttl {
+                                background-color: #CFD1E0;
+                                font-size: 36px;
+                                font-weight: bold;
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 50%;
+                                line-height: 100px;
+                                text-align: center;
+
+                                @include bp {
+                                    @include circle(120);
+                                    @include fontVw(44);
+                                }
+                            }
+
+                            & .point5AcList__txtWrap {
+                                margin: 20px 0 0 20px;
+
+                                & .point5AcList__txt {
+                                    font-size: 20px;
+                                    margin-bottom: 15px;
+
+                                    @include bp {
+                                        @include fontVw(28);
+                                    }
+                                }
+
+                                & .point5AcList__txt--large {
+                                    font-size: 32px;
+                                    font-weight: bold;
+                                    line-height: 1.313;
+
+                                    @include bp {
+                                        @include fontVw(40);
+                                        line-height: 1.227;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    & .point5Ac__txt--caption {
+                        font-size: 14px;
+                        margin-bottom: 10px;
+
+                        @include bp {
+                            @include fontVw(24);
+                            line-height: 1.667;
+                        }
+
+                        & a {
+                            color: #000;
+                        }
+                    }
+
+                    & .point5AcFeature {
+                        @include bp {
+                            overflow-x: scroll;
+                        }
+
+                        & .point5AcFeature__ttl {
+                            margin: 60px 0 20px;
+                            color: #050F5D;
+                            font-size: 20px;
+                            font-weight: bold;
+                            
+                        }
+
+                        & .point5AcFeature__img {
+                            width: 100%;
+
+                            @include bp {
+                                width: auto;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            & .point5Topic {
+                background-color: #FEF8D7;
+                margin-top: 30px;
+                padding: 40px;
+                border-radius: 20px;
+
+                & .point5Topic__heading {
+                    font-size: 32px;
+                    color: #050F5D;
+                    font-weight: bold;
+                    margin-bottom: 47px;
+
+                    @include bp {
+                        @include fontVw(24);
+                    }
+                }
+
+                & .point5Topic__ttl {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 23px;
+
+                    @include bp {
+                        @include fontVw(28);
+                    }
+                }
+
+                & .point5Topic__txt {
+                    font-size: 16px;
+                    margin-bottom: 35px;
+
+                    @include bp {
+                        @include fontVw(24);
+                        line-height: 1.667;
+                    }
+                }
+
+                & .point5TopicWrap {
+                    display: flex;
+                    margin-top: 30px;
+
+                    @include bp {
+                        flex-direction: column;
+                    }
+
+                    & .point5Topic__item {
+                        &:first-child {
+                            text-align: center;
+
+                            & .point5Topic__img {
+                                margin-bottom: 30px;
+
+                                @include bp {
+                                    width: 100%;
+                                }
+                            }
+
+                            & .point5Topic__caption {
+                                font-size: 16px;
+                                line-height: 1.5;
+
+                                @include bp {
+                                    @include fontVw(28);
+                                }
+                            }
+                        }
+
+                        &:last-child {
+                            padding: 34px 34px 25px;
+                            border-radius: 20px;
+                            margin-left: 61px;
+                            background-color: #FFF;
+                            position: relative;
+
+                            @include bp {
+                                margin-left: 0;
+                                margin-top: 50px;
+                            }
+
+                            & .point5Topic__comment {
+                                font-size: 16px;
+                                line-height: 1.5;
+
+                                @include bp {
+                                    @include fontVw(24);
+                                }
+                            }
+                        }
+
+                        &:last-child::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: -83px;
+                            margin-top: -100px;
+                            border: 35px solid transparent;
+                            border-right: 50px solid #FFF;
+
+                            @include bp {
+                                top: 0%;
+                                transform: rotate(90deg);
+                                margin-top: -70px;
+                                left: 40%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

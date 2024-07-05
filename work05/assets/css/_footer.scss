@@ -1,0 +1,137 @@
+.mainBottomInner {
+    @include WidthConfig;
+    text-align: center;
+
+    & .mainBottomInner__img {
+        width: 100%;
+        transform: translateY(31px);
+
+        @include bp {
+            display: none;
+        }
+    }
+    & .mainBottomInner__img--sp {
+        display: none;
+
+        @include bp {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+
+.footer {
+    @include WidthConfig;
+
+    & .footerInner {
+        display: flex;
+        padding: 98px 50px;
+        justify-content: space-between;
+
+        @include bp {
+            flex-direction: column;
+            padding: 64px 0;
+            text-align: center;
+        }
+
+        & .footerItem {
+            & .footer__logo {
+                width: 330px;
+
+                @include bp {
+                    @include imgVw(440)
+                }
+            }
+
+            & .footer__dial {
+                width: 286px;
+                height: 28px;
+                background-color: #050F5D;
+                border-radius: 30px;
+                text-align: center;
+                margin: 0 auto;
+
+                @include bp {
+                    margin: 30px auto 0;
+                    width: 347px;
+                    height: 40px;
+                }
+                
+
+                & .footer__dialTxt {
+                    color: #FFF;
+                    font-size: 16px;
+                    font-weight: bold;
+                    line-height: 2;
+
+                    @include bp {
+                        font-size: 24px;
+                    }
+                }
+            }
+              
+            & .footer__dialNum {
+                font-size: 36px;
+                color: #050F5D;
+                font-weight: bold;
+                text-align: center;
+                padding-top: 11px;
+
+                @include bp {
+                    @include fontVw(44);
+                    padding-top: 13px;
+                }
+            }
+
+            & .footer__address {
+                font-size: 16px;
+                color: #050F5D;
+                line-height: 2;
+                margin-bottom: 5px;
+
+                @include bp {
+                    @include fontVw(28);
+                    padding-top: 38px;
+                }
+            }
+
+            & .footer__telFax {
+                font-size: 16px;
+                color: #050F5D;
+                line-height: 2;
+                @include bp {
+                    @include fontVw(28);
+                }
+            }
+        }
+    }
+
+    & .footerButton {
+        display: block;
+        position: fixed;
+        width: 80px;
+        bottom: -160px;
+        right: 46px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: bottom 0.3s;
+
+        @include bp {
+            @include imgVw(80);
+            right: 40px;
+        }
+
+        & .footerButton__img {
+            width: 100%;
+        }
+
+        &.is-show {
+            bottom: 60px;
+
+            @include bp {
+                bottom: 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.intro {
+    @include WidthConfig;
+    text-align: center;
+    padding: 270px 0 70px;
+
+    & .intro__txt {
+        padding-top: 70px;
+        display: block;
+        color: #FFF;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 2.4;
+
+        @include bp {
+            padding: 70px 20px 0;
+            @include fontVw(24);
+        }
+    }
+}

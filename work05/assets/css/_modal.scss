@@ -1,0 +1,164 @@
+.modalWrap {
+    position: fixed;
+    background-color: rgba(0,0,0,0.702);
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    display: none;
+
+    &.is-show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & .modal {
+        max-width: 1200px;
+        max-height: calc(100vh - 200px) ;
+        overflow: auto;
+        background-color: #FFF;
+        margin: 60px 50px 0;
+        border-radius: 20px;
+
+
+        @include bp {
+            margin: 70px 50px 0;
+        }
+
+
+
+    
+        & .modal__heading {
+            background-color: yellow;
+            width: 280px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+    
+        & .modal__itemWrap {
+            & .modal__item {
+                display: none;
+    
+                &.is-show {
+                    display: flex;
+                }
+    
+                @include bp {
+                    flex-wrap: wrap;
+                }
+                
+                & .modal__paragraph {
+                    margin-top: 50px;
+                    margin-left: 60px;
+                    width: 60%;
+    
+                    @include bp {
+                        width: 100%;
+                        margin-left: 0;
+                        padding: 0 40px;
+                    }
+    
+                    & .modal__ttl {
+                        font-size: 28px;
+                        font-weight: bold;
+                        color: #050F5D;
+                        margin-bottom: 25px;
+    
+                        @include bp {
+                            @include fontVw(32);
+                            margin-bottom: 45px;
+    
+                        }
+                    }
+    
+                    & .modal__txt {
+                        font-size: 16px;
+                        line-height: 2;
+    
+                        @include bp {
+                            @include fontVw(24);
+                            line-height: 1.667;
+                        }
+                    }
+                }
+        
+                
+                & .modal__personal {
+                    text-align: center;
+                    margin: 50px 30px 0 40px;
+                    width: 40%;
+    
+                    @include bp {
+                        margin: 40px auto 0;
+                    }
+        
+                    & .modal__img {
+                        width: 100%;
+                        margin-bottom: 30px;
+
+                    }
+    
+                    & .modal__status {
+                        font-size: 16px;
+                        line-height: 1.75;
+    
+                        @include bp {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    
+        & .modal__close {
+            margin: 80px auto 60px;
+            width: 60px;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.4;
+            cursor: pointer;
+    
+            @include bp {
+                margin: 60px auto;
+            }
+        }
+    }
+}
+.modal__button {
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    cursor: pointer;
+
+    @media screen and (min-width: 1200px) {
+        right: calc((100vw - 1200px) / 2 );
+      }
+
+    & .modal__buttonBorder {
+        position: absolute;
+        width: 2px;
+        height: 60px;
+        background-color: #FFF;
+        &:first-child {
+            transform: rotate(45deg);
+            top: 0;
+            right: 30px;
+        }
+        &:last-child {
+            transform: rotate(-45deg);
+            top: 0;
+            right: 30px;
+        }
+    }
+}
