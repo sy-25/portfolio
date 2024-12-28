@@ -276,11 +276,11 @@ a {
                 font-size: 18px;
             }
 
-            &.skill__contentsListItem--html {
+            &.skill__contentsListItem--html5 {
                 @include textImg(25px, '../images/html5.png');
             }
 
-            &.skill__contentsListItem--css {
+            &.skill__contentsListItem--css3 {
                 @include textImg(25px, '../images/css3.png');
             }
 
@@ -288,8 +288,8 @@ a {
                 @include textImg(25px, '../images/scss.png');
             }
 
-            &.skill__contentsListItem--js {
-                @include textImg(25px, '../images/js.png');
+            &.skill__contentsListItem--javascript {
+                @include textImg(25px, '../images/javascript.png');
             }
 
             &.skill__contentsListItem--jquery {
@@ -300,19 +300,51 @@ a {
                 @include textImg(25px, '../images/vue.png');
             }
 
+            &.skill__contentsListItem--php {
+                @include textImg(25px, '../images/php.png');
+            }
+
+            &.skill__contentsListItem--laravel {
+                @include textImg(25px, '../images/laravel.png');
+            }
+
             &.skill__contentsListItem--aws {
                 @include textImg(25px, '../images/aws.png');
+            }
+
+            &.skill__contentsListItem--postgresql {
+                @include textImg(25px, '../images/postgresql.png');
             }
 
             &.skill__contentsListItem--vscode {
                 @include textImg(25px, '../images/vscode.png');
             }
 
+            &.skill__contentsListItem--cursor {
+                @include textImg(25px, '../images/cursor.png');
+            }
+
             &.skill__contentsListItem--github {
                 @include textImg(25px, '../images/github.png');
             }
 
-            &.skill__contentsListItem--ps {
+            &.skill__contentsListItem--tortoisegit {
+                @include textImg(25px, '../images/tortoisegit.png');
+            }
+
+            &.skill__contentsListItem--virtualbox {
+                @include textImg(25px, '../images/virtualbox.png');
+            }
+
+            &.skill__contentsListItem--a5m2 {
+                @include textImg(25px, '../images/a5m2.png');
+            }
+
+            &.skill__contentsListItem--winscp {
+                @include textImg(25px, '../images/winscp.png');
+            }
+
+            &.skill__contentsListItem--photoshop {
                 @include textImg(25px, '../images/photoshop.png');
             }
 
@@ -335,6 +367,22 @@ a {
 
     .section__ttl {
         @include textImg(40px, '../images/work.png');
+        margin-bottom: 10px;
+
+        @include sp {
+            margin-bottom: 20px;
+        }
+    }
+
+    .work__txt {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 40px;
+
+        @include sp {
+            font-size: 14px;
+            margin-bottom: 50px;
+        }
     }
 
     .work__list {
@@ -504,6 +552,19 @@ a {
                 @include sp {
                     padding: 3px 0;
                     width: 130px;
+                }
+
+                &.is-disabled {
+                    box-shadow: none;
+                    transform: translateY(3px);
+                    color: #999;
+                    background-color: #EFEFEF;
+                    border: 1px solid #999;
+                    pointer-events: none;
+
+                    &::before {
+                        opacity: .7;
+                    }
                 }
 
                 &:hover {

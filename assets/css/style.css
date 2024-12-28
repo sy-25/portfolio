@@ -343,11 +343,11 @@ a {
     font-size: 18px;
   }
 }
-.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--html {
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--html5 {
   display: flex;
   align-items: center;
 }
-.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--html::before {
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--html5::before {
   content: "";
   display: inline-block;
   width: 25px;
@@ -358,16 +358,16 @@ a {
   vertical-align: bottom;
 }
 @media screen and (max-width: 768px) {
-  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--html::before {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--html5::before {
     width: 22.5px;
     height: 22.5px;
   }
 }
-.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--css {
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--css3 {
   display: flex;
   align-items: center;
 }
-.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--css::before {
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--css3::before {
   content: "";
   display: inline-block;
   width: 25px;
@@ -378,7 +378,7 @@ a {
   vertical-align: bottom;
 }
 @media screen and (max-width: 768px) {
-  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--css::before {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--css3::before {
     width: 22.5px;
     height: 22.5px;
   }
@@ -403,22 +403,22 @@ a {
     height: 22.5px;
   }
 }
-.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--js {
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--javascript {
   display: flex;
   align-items: center;
 }
-.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--js::before {
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--javascript::before {
   content: "";
   display: inline-block;
   width: 25px;
   height: 25px;
-  background-image: url("../images/js.png");
+  background-image: url("../images/javascript.png");
   background-size: contain;
   margin-right: 0.5em;
   vertical-align: bottom;
 }
 @media screen and (max-width: 768px) {
-  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--js::before {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--javascript::before {
     width: 22.5px;
     height: 22.5px;
   }
@@ -463,6 +463,46 @@ a {
     height: 22.5px;
   }
 }
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--php {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--php::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/php.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--php::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--laravel {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--laravel::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/laravel.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--laravel::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
 .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--aws {
   display: flex;
   align-items: center;
@@ -479,6 +519,26 @@ a {
 }
 @media screen and (max-width: 768px) {
   .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--aws::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--postgresql {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--postgresql::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/postgresql.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--postgresql::before {
     width: 22.5px;
     height: 22.5px;
   }
@@ -503,6 +563,26 @@ a {
     height: 22.5px;
   }
 }
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--cursor {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--cursor::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/cursor.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--cursor::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
 .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--github {
   display: flex;
   align-items: center;
@@ -523,11 +603,91 @@ a {
     height: 22.5px;
   }
 }
-.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--ps {
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--tortoisegit {
   display: flex;
   align-items: center;
 }
-.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--ps::before {
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--tortoisegit::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/tortoisegit.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--tortoisegit::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--virtualbox {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--virtualbox::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/virtualbox.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--virtualbox::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--a5m2 {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--a5m2::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/a5m2.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--a5m2::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--winscp {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--winscp::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/winscp.png");
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--winscp::before {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--photoshop {
+  display: flex;
+  align-items: center;
+}
+.skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--photoshop::before {
   content: "";
   display: inline-block;
   width: 25px;
@@ -538,7 +698,7 @@ a {
   vertical-align: bottom;
 }
 @media screen and (max-width: 768px) {
-  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--ps::before {
+  .skill .skill__contentsList .skill__contentsListItem.skill__contentsListItem--photoshop::before {
     width: 22.5px;
     height: 22.5px;
   }
@@ -607,6 +767,7 @@ a {
 .work .section__ttl {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 .work .section__ttl::before {
   content: "";
@@ -622,6 +783,22 @@ a {
   .work .section__ttl::before {
     width: 36px;
     height: 36px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .work .section__ttl {
+    margin-bottom: 20px;
+  }
+}
+.work .work__txt {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .work .work__txt {
+    font-size: 14px;
+    margin-bottom: 50px;
   }
 }
 .work .work__list {
@@ -781,6 +958,17 @@ a {
     padding: 3px 0;
     width: 130px;
   }
+}
+.modal__contents:first-child .modal__contentsLinkWrap .modal__contentsLink.is-disabled {
+  box-shadow: none;
+  transform: translateY(3px);
+  color: #999;
+  background-color: #EFEFEF;
+  border: 1px solid #999;
+  pointer-events: none;
+}
+.modal__contents:first-child .modal__contentsLinkWrap .modal__contentsLink.is-disabled::before {
+  opacity: 0.7;
 }
 .modal__contents:first-child .modal__contentsLinkWrap .modal__contentsLink:hover {
   box-shadow: none;
