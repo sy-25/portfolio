@@ -1,0 +1,25 @@
+$mediaQuerySp : 960px;
+$mediaQuerySpSmall : 570px;
+$black : #333;
+$white : #fff;
+$gray : #ccc;
+$darkGray : #666;
+$darkerGray : #999;
+$blue : #0073cc;
+$hoverBlue : #30b2ff;
+$borderColor : #e5e5e5;
+$backGroundColor : #f5f5f5;
+$attentionColor : #ff333f;
+$hoverAttentionColor : #ff6574;
+
+@mixin mediaQuerySp {
+    @media screen and (max-width: ($mediaQuerySp)) {
+        @content
+    }
+};
+
+@mixin mediaQuerySpSmall {
+    @media screen and (max-width: ($mediaQuerySpSmall)) {
+        @content
+    }
+};
